@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>诺依阁的日记簿</title>
+  <icon>https://www.gravatar.com/avatar/6abf8f79fe73648b360cfe2edce80c71</icon>
+  <subtitle>一个记录技术的日记簿</subtitle>
+  <link href="https://blog.nuoyis.net/atom.xml" rel="self"/>
+  
+  <link href="https://blog.nuoyis.net/"/>
+  <updated>2024-08-25T09:42:24.329Z</updated>
+  <id>https://blog.nuoyis.net/</id>
+  
+  <author>
+    <name>诺依阁</name>
+    <email>wkkjonlykang@vip.qq.com</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧</title>
+    <link href="https://blog.nuoyis.net/posts/9bb5.html"/>
+    <id>https://blog.nuoyis.net/posts/9bb5.html</id>
+    <published>2024-07-26T23:05:36.000Z</published>
+    <updated>2024-08-25T09:42:24.329Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近，使用了红帽9.4和Rocky9.4 外带升级最新内核，再加上小许调优措施，访问速度已经达到了之前centos 8 2核4G的速度了。主要是最小化的红帽9，启动速度比7和8更加快速，只要你会手动配源就能体验到秒速启动的快感。&lt;br&gt;然后就是Centos</summary>
+        
+      
+    
+    
+    
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RHEL9-Rocky9-Openeuler下载方法</title>
+    <link href="https://blog.nuoyis.net/posts/92c1.html"/>
+    <id>https://blog.nuoyis.net/posts/92c1.html</id>
+    <published>2024-07-07T04:04:00.000Z</published>
+    <updated>2024-08-25T09:42:24.325Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Red Hat Enterprise Linux官方下载的话，首先得进入官网，选择右上角support,再点击downloads，然后点击Red Hat Enterprise Linux,再去选择9.x版本&lt;br&gt;快捷进入(需要注册):&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Docker用法合集</title>
+    <link href="https://blog.nuoyis.net/posts/6465.html"/>
+    <id>https://blog.nuoyis.net/posts/6465.html</id>
+    <published>2024-05-23T22:23:00.000Z</published>
+    <updated>2024-08-25T09:42:24.325Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;docker命令大全&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>以 RHCL9 做路由器分配教程</title>
+    <link href="https://blog.nuoyis.net/posts/f52a.html"/>
+    <id>https://blog.nuoyis.net/posts/f52a.html</id>
+    <published>2024-05-10T19:36:00.000Z</published>
+    <updated>2024-08-25T09:42:24.325Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;h1 id=&quot;装配前置&quot;&gt;&lt;a href=&quot;#装配前置&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RHCL 9 合集</title>
+    <link href="https://blog.nuoyis.net/posts/f02.html"/>
+    <id>https://blog.nuoyis.net/posts/f02.html</id>
+    <published>2024-05-10T01:54:00.000Z</published>
+    <updated>2024-08-25T09:42:24.325Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;h1 id=&quot;遇到的问题&quot;&gt;&lt;a href=&quot;#遇到的问题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vue主页开发日记(二)</title>
+    <link href="https://blog.nuoyis.net/posts/31e4.html"/>
+    <id>https://blog.nuoyis.net/posts/31e4.html</id>
+    <published>2024-03-12T04:00:00.000Z</published>
+    <updated>2024-08-25T09:42:24.325Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;第二篇来快速讲解vue,以及设计个抽象js,没有抽象的js是无法完成高效率的&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我的主页: &lt;a href=&quot;https://www.nuoyis.net/&quot;&gt;https://www.nuoyis.net&lt;/a&gt;&lt;br&gt;我的开源库:</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vue主页开发日记(一)</title>
+    <link href="https://blog.nuoyis.net/posts/f140.html"/>
+    <id>https://blog.nuoyis.net/posts/f140.html</id>
+    <published>2024-03-11T04:00:00.000Z</published>
+    <updated>2024-08-25T09:42:24.325Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;webpages虽然开源了，但是那是之前的html模板，现在已经逐渐适配Vue。在编写Vue时，为了记录开发进程，以日记的方法来记录&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我的主页: &lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>利用cloudflare搭建二次元随机图片刷新图床</title>
+    <link href="https://blog.nuoyis.net/posts/f408.html"/>
+    <id>https://blog.nuoyis.net/posts/f408.html</id>
+    <published>2024-03-01T13:15:10.000Z</published>
+    <updated>2024-08-25T09:42:24.329Z</updated>
+    
+    
+    
+    
+    <category term="教程类" scheme="https://blog.nuoyis.net/categories/%E6%95%99%E7%A8%8B%E7%B1%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo外带主题的配置方案</title>
+    <link href="https://blog.nuoyis.net/posts/3f34.html"/>
+    <id>https://blog.nuoyis.net/posts/3f34.html</id>
+    <published>2024-02-18T10:32:26.000Z</published>
+    <updated>2024-08-25T09:42:24.325Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Hexo作为一个能静态化的轻量级博客程序，拥有着无需服务器，仅需一个github pages+全球CDN就秒杀绝大多数的动态语言博客。当然动态语言博客可以多人使用，hexo适合个人使用且无后台，也就无后台被攻击这种说法了。&lt;br&gt;首先感谢:&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>雨云美国一区服务器测评</title>
+    <link href="https://blog.nuoyis.net/posts/bd9b.html"/>
+    <id>https://blog.nuoyis.net/posts/bd9b.html</id>
+    <published>2024-02-18T10:20:09.000Z</published>
+    <updated>2024-08-25T09:42:24.329Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前简单测评了下雨云服务器的网速和延迟，但是没有进行过性能测试。这次我选用的配置如下:&lt;br&gt;2核心2G(CPU为 : Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz)&lt;br&gt;带宽为 上传30兆，下载为50兆&lt;br&gt;测试结果: &lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>利用Python3来快速从Typecho迁移至Hexo</title>
+    <link href="https://blog.nuoyis.net/posts/b4cf.html"/>
+    <id>https://blog.nuoyis.net/posts/b4cf.html</id>
+    <published>2024-02-04T13:42:34.000Z</published>
+    <updated>2024-08-25T09:42:24.329Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近在GitHub上找到一个写Typecho转Hexo的大佬，可惜我是最新版的Python，运行直接报错，修改一个如同大洪水一样又报错很多。&lt;br&gt;于是在他的基础上，用python3的包来替换原来的一些写的方法。&lt;br&gt;代码如下:&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>用python实现部分按键自动化</title>
+    <link href="https://blog.nuoyis.net/posts/1f2.html"/>
+    <id>https://blog.nuoyis.net/posts/1f2.html</id>
+    <published>2024-01-29T01:19:22.000Z</published>
+    <updated>2024-08-25T09:42:24.329Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;自从学了python以来，那就得用在最该用的地方-&amp;gt;自动化。(爬虫就算了)&lt;br&gt;目前写了个小的enter键按法，对于gta5已经试验过可以使用。&lt;br&gt;代码如下:&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>利用Github Actions来部署Hexo</title>
+    <link href="https://blog.nuoyis.net/posts/1594.html"/>
+    <id>https://blog.nuoyis.net/posts/1594.html</id>
+    <published>2024-01-23T12:24:42.000Z</published>
+    <updated>2024-08-25T09:42:24.329Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Hexo在本地运行时，每次都需要运行一套命令(hexo cl,hexo g,hexo d,hexo s),而且上传时长抽风(长期大量上传文件)，本地基础文件又容易丢失。所以，我用github Actions来修补以上问题。&lt;br&gt;最开始很多关于github</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>日记簿底层框架已切换为Hexo</title>
+    <link href="https://blog.nuoyis.net/posts/46e9.html"/>
+    <id>https://blog.nuoyis.net/posts/46e9.html</id>
+    <published>2024-01-20T22:03:41.000Z</published>
+    <updated>2024-08-25T09:42:24.329Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Hexo很轻便，用github可以做大负载站点。且维护简单，无需关注站点本身环境问题。只需考虑上传问题。原树据之海站点已经迁移至其他站点。目前暂定域名为sea1024.nuoyis.net&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Miao-Yunzai | 2024年搭建教程</title>
+    <link href="https://blog.nuoyis.net/posts/3946.html"/>
+    <id>https://blog.nuoyis.net/posts/3946.html</id>
+    <published>2024-01-03T03:36:00.000Z</published>
+    <updated>2024-08-25T09:42:24.325Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">docker版本可能不会再出了
+&lt;p&gt;我将几位博主的文章进行综合，并完善搭建方法&lt;br&gt;首先用下面命令安装nodejs&lt;br&gt;ubuntu/debian&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="未分类" scheme="https://blog.nuoyis.net/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大一网络课考试前夕总结</title>
+    <link href="https://blog.nuoyis.net/posts/599e.html"/>
+    <id>https://blog.nuoyis.net/posts/599e.html</id>
+    <published>2023-12-26T19:24:45.000Z</published>
+    <updated>2024-08-25T09:42:24.329Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;计算机网络概念&lt;/strong&gt;&lt;br&gt;计算机网络是一组相互连接，通过数据通信链路将远近的计算机通过某种协议和网络系统以及网络管理软件的管理和协调下进行共享资源和信息传递的计算机系统。&lt;br&gt;&lt;strong&gt;带宽概念&lt;/strong&gt;&lt;br&gt;带宽是指网络或通</summary>
+        
+      
+    
+    
+    
+    <category term="教程类" scheme="https://blog.nuoyis.net/categories/%E6%95%99%E7%A8%8B%E7%B1%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>阿里云serverless | 10分钟内搭建好typecho</title>
+    <link href="https://blog.nuoyis.net/posts/1d39.html"/>
+    <id>https://blog.nuoyis.net/posts/1d39.html</id>
+    <published>2023-12-06T23:57:00.000Z</published>
+    <updated>2024-08-25T09:42:24.329Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">首先你需要从我仓库复制一份我改造好版本的serverless-typecho
+&lt;p&gt;仓库地址:&lt;code&gt;https://github.com/nuoyis/serverless-typecho&lt;/code&gt;&lt;br&gt;然后阿里云登录，在搜索中搜索函数计算FC&lt;br&gt;点击应用，然后创</summary>
+        
+      
+    
+    
+    
+    <category term="教程类" scheme="https://blog.nuoyis.net/categories/%E6%95%99%E7%A8%8B%E7%B1%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>西部数码的虚拟主机测评</title>
+    <link href="https://blog.nuoyis.net/posts/ba63.html"/>
+    <id>https://blog.nuoyis.net/posts/ba63.html</id>
+    <published>2023-12-06T08:11:00.000Z</published>
+    <updated>2024-08-25T09:42:24.329Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这次带来了西部数码的虚拟主机测评。因为本站博客要求极高，由于主要服务器压力比较大，相应速度较为缓慢，其他厂家(硅云只支持php54,雨云等)均不支持博客邮件发送或者需要切低版本使用。但切低版本会造成部分代码不适配。&lt;br&gt;于是我把目光转向了西部数码，购买了79一年双机房版本</summary>
+        
+      
+    
+    
+    
+    <category term="技术类" scheme="https://blog.nuoyis.net/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关于广电5G的测评(后续持续跟进)</title>
+    <link href="https://blog.nuoyis.net/posts/6ffe.html"/>
+    <id>https://blog.nuoyis.net/posts/6ffe.html</id>
+    <published>2023-12-01T16:43:00.000Z</published>
+    <updated>2024-08-25T09:42:24.329Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;广电和移动目前是互用的，基站能互享的原因是广电获得700MHz频段(俗称黄金频段)，看到移动给的流量少，我果断搞了一张多亿点点流量的广电卡。&lt;br&gt;我办的是广电福兔卡（因为附近电信和联通已经卡成5G只有5兆速度，4G比5G块的情况）测试到目前广电没有卡几下，十分的流畅。&lt;b</summary>
+        
+      
+    
+    
+    
+    <category term="技术类" scheme="https://blog.nuoyis.net/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>学习测试脚本 死亡ping</title>
+    <link href="https://blog.nuoyis.net/posts/d256.html"/>
+    <id>https://blog.nuoyis.net/posts/d256.html</id>
+    <published>2023-11-21T03:05:05.000Z</published>
+    <updated>2024-08-25T09:42:24.329Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近实在是太忙了，还有篇工具箱的文章等着出。目前先把测试感觉良好的死亡ping cmd脚本提供给大家使用。&lt;br&gt;同时，死亡ping可以测试你真正cpu和内存的承受能力，开到400我的笔记本就差不多有些卡了。&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="uncategorized" scheme="https://blog.nuoyis.net/categories/uncategorized/"/>
+    
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>诺依阁的日记簿 - 一个记录技术的日记簿</title><meta name="author" content="诺依阁,wkkjonlykang@vip.qq.com"><meta name="copyright" content="诺依阁"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一个记录技术的日记簿"><meta property="og:type" content="website"><meta property="og:title" content="诺依阁的日记簿"><meta property="og:url" content="https://blog.nuoyis.net/page/4/index.html"><meta property="og:site_name" content="诺依阁的日记簿"><meta property="og:description" content="一个记录技术的日记簿"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&spec=640&img_type=jpg"><meta property="article:author" content="诺依阁"><meta property="article:tag" content="typecho,php,blog,诺依阁,站长,系统安装,环境搭建,服务器,站长,诺依阁的日常记录,生活,技术,科技,日记,诺依阁的日记簿,博客,云服务器,白嫖,自媒体,树洞空间"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&spec=640&img_type=jpg"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://blog.nuoyis.net/page/4/index.html"><link rel="preconnect" href="https://lib.baomitu.com"><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/6.5.1/css/all.min.css"><link rel="stylesheet" href="https://lib.baomitu.com/fancyapps-ui/5.0.32/fancybox/fancybox.min.css" media="print" onload='this.media="all"'><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-4015694772463475",enable_page_level_ads:"true"})</script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?2c790c11308ab98338b82482af6a4ff1";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://lib.baomitu.com/egjs-infinitegrid/4.11.0/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"诺依阁的日记簿",isPost:!1,isHome:!0,isHighlightShrink:!1,isToc:!1,postUpdate:"2024-08-25 17:42:50"}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="https://static.nuoyis.net/libs/blog/typecho/themes/butterfly/static/css/Hanasaki.css"><meta name="generator" content="Hexo 7.3.0"><style>.github-emoji{position:relative;display:inline-block;width:1.2em;min-height:1.2em;overflow:hidden;vertical-align:top;color:transparent}.github-emoji>span{position:relative;z-index:10}.github-emoji .fancybox,.github-emoji img{margin:0!important;padding:0!important;border:none!important;outline:0!important;text-decoration:none!important;user-select:none!important;cursor:auto!important}.github-emoji img{height:1.2em!important;width:1.2em!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;user-select:none!important;cursor:auto!important}.github-emoji-fallback{color:inherit}.github-emoji-fallback img{opacity:0!important}</style><link rel="alternate" href="/atom.xml" title="诺依阁的日记簿" type="application/atom+xml"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&amp;spec=640&amp;img_type=jpg" onerror='onerror=null,src="/img/friend_404.gif"' alt="avatar"></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">117</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></div><div class="menus_item"><a class="site-page" href="/youlian/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background:0 0"><nav id="nav"><span id="blog-info"><a href="/" title="诺依阁的日记簿"><span class="site-name">诺依阁的日记簿</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></div><div class="menus_item"><a class="site-page" href="/youlian/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">诺依阁的日记簿</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/fbda.html" title="关于一些学校事件提问的合集"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?5270" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="关于一些学校事件提问的合集"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/fbda.html" title="关于一些学校事件提问的合集">关于一些学校事件提问的合集</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-09-05T02:02:55.000Z" title="发表于 2023-09-05 10:02:55">2023-09-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/guing/">guing</a></span></div><div class="content">1.校园卡是什么东西，如何办理，什么时候到校园信息卡就是费率低的电信电话卡，价格和套餐以及签字协议如下图所示。卡主要套餐只有一个，39元每月，激活后送50元话费，每月有宽带50兆和校园网21兆 校园信息卡10天内会发出(否则激活就来不及了，一般激活时间都是10天内),查询通道:华为智慧助手·今天(其他手机往左边滑，如果有负一屏看看是否有查询快递)发出的快递是极兔速递 2.我把卡寄到家后不想要了，不激活能行吗可以，不激活就是空卡，注意部分卡型可能存在拉黑现象 3.激活后不想要了怎么办打10000人工客服注销卡，有个同学就可以了</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/3299.html" title="日记簿逐渐过渡到云计算方面"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?6387" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="日记簿逐渐过渡到云计算方面"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/3299.html" title="日记簿逐渐过渡到云计算方面">日记簿逐渐过渡到云计算方面</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-09-01T16:52:12.000Z" title="发表于 2023-09-02 00:52:12">2023-09-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/guing/">guing</a></span></div><div class="content">距离大学报道还有11天，身为云计算的我不能丢了本命专业。linux系列和python未来将会专门分类，以及新创建的openstack。很多人说openstack没有其他的弹性化虚拟化软件好用，但是我是认为教学方面使用肯定是有它的意义，况且考试也是需要用到的。如果你也是云计算的大佬可以在我的评论区给我提出些建议，避免撞墙式学习顺便送一首歌​</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/1367.html" title="100篇文章里程碑"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?6645" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="100篇文章里程碑"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/1367.html" title="100篇文章里程碑">100篇文章里程碑</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-20T21:00:57.000Z" title="发表于 2023-08-21 05:00:57">2023-08-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/">技术类</a></span></div><div class="content">终于到100篇文章了。之前还有很多兴趣去开发和编写很多内容并于大家分享。但是时间总是安排很紧迫，作为一个很早就玩过博客的人，数据丢失的部分很难再找回，也很心痛。之前域名也没有做引导，导致域名换的平凡而丢失了许多流量。虽然100篇早就该到了，但是现在到也没什么，只要我想起之前写了什么，就逐渐恢复回来。博客经过跌打误撞，还是建立好了。最初博客就是我的笔记本上的内容，早期丢失的文章在我的笔记本上几乎都存在些印子。一开始录入电子化还是纯手打，后来才是逐渐用的文字扫描。到了100篇后，这个域名几乎就固定下来了。net也许能陪我跑几年，即使最后写不动文章就转成静态继续在互联网上奔跑。服务也比以前稳定了。你看到这两个月访问速度慢，那是因为换到net，net没有回国，所以就备不了案。9月10日本站开始对国内方向进行关站维护，维护完成后正式对100篇文章做纪念图片</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/43ca.html" title="cloudflare saas接入 - 加速和抵抗海外攻击"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?8647" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="cloudflare saas接入 - 加速和抵抗海外攻击"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/43ca.html" title="cloudflare saas接入 - 加速和抵抗海外攻击">cloudflare saas接入 - 加速和抵抗海外攻击</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-20T19:15:19.000Z" title="发表于 2023-08-21 03:15:19">2023-08-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B%E7%B1%BB/">教程类</a></span></div><div class="content">前情提示:本文章得有备案域名，没有就不要想着默认解析使用国内的了，直接解析我提供的访问还可以的cloudflare本文章还得有一个嫖的顶级域名(后续文章)海外(或未备案)域名解析地址:dns-server-cloudflare.nuoyis.net 很多人说cloudflare是国内的减速器，但cloudflare可以反过来利用加速海外。cloudflare海外加速几乎都是1-10毫秒，少数像中国这样不支持的达到90-150毫秒。cloudflare大缓存技术可以使静态库在海外无惧攻击，github pages+cloudflare全缓存就是几乎无敌。这留在下一篇文章讲解静态库高速回国办法。cloudflare缓存后硬抗如下首先，得添加域名，就点击右上角的添加站点-&gt;输入顶级域名-&gt;下拉选择free-&gt;修改DNS为下面-&gt;等待完成 12delilah.ns.cloudflare.comlamar.ns.cloudflare.com 点击刚刚你添加的域名，先添加你要解析的域名，如 cloudflare 前缀 a解析到127.0.0.1找到左侧SSL/TLS并展 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/547.html" title="家用小主机3 - 内网映射并访问"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?1791" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="家用小主机3 - 内网映射并访问"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/547.html" title="家用小主机3 - 内网映射并访问">家用小主机3 - 内网映射并访问</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-10T19:36:00.000Z" title="发表于 2023-08-11 03:36:00">2023-08-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/">技术类</a></span></div><div class="content">说起家用小主机，映射是必绕不开的话题。目前发现映射就那么几款，可以看我之前的那篇文章 frp映射：https://blog.nuoyis.net/posts/ce1f.html 本地需要搭建好nginx，php-fpm，mysql5.6以上，如果配置及其麻烦可以使用宝塔代替安装(windows直接手搓，网上有教程)映射的时候要把http隧道和https隧道分别输入一遍，然后确保本地防火墙开放80端口和443端口上述搭建好了可以测试下frp，如果能访问做下面的事情frp因为退出可能就运行结束了，这里采用系统注册的方式来确保frp不会杀掉创建个frpc.service 12345678910111213[Unit]Description=frpc serviceAfter=network.target syslog.targetWants=network.target[Service]Type=simpleRestart=on-failureRestartSec=5sExecStart=/bin/bash -c '/usr/local/frp/frpc -c /usr/local/frp/ ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/a278.html" title="家用小主机2 - 硬件改造与ubuntu安装"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?2909" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="家用小主机2 - 硬件改造与ubuntu安装"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/a278.html" title="家用小主机2 - 硬件改造与ubuntu安装">家用小主机2 - 硬件改造与ubuntu安装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-10T19:35:40.000Z" title="发表于 2023-08-11 03:35:40">2023-08-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B%E7%B1%BB/">教程类</a></span></div><div class="content">之前的这个小主机目前网站重新移到云端后，小主机用来内网下载和直播录制以及直播回放。但是有一个问题，小主机就30g，内存不够做更多这方面的内容。所以，本期文章就出现了:改造我们小主机的存储内存。好家伙，小主机的存储接口是msata的，在某宝上搜索，三星300多元的一块就把我吓得劝退。于是我就找到了这家店这家可以把msata转sata,让我闲置的廉价且高质量的sata有了用场。这里采用的是爱国者128G(S500),配件和硬盘截图如下然后首先打开小主机的背板，然后把配件插进去对位，因为线有一根插上去很难拔下来对位好后先将线排版好，不遮挡其他主要工作区域，装好后效果图上盖，然后u盘装载镜像，去找个显示屏安装这里由于当时没拍照截图，就用虚拟机展示下对比底下有没有绿色按钮,有就直接点就完事了，没有需要修改等待，然后出现reboot那个按钮点击，点击后出现这种情况就需要ctrl+c 系统如果没有全部分配完，需要操作以下代码 12sudo lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lvsudo resize2fs /dev/mapper ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/cb12.html" title="ubuntu一键配置ssh root登陆脚本"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?6776" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="ubuntu一键配置ssh root登陆脚本"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/cb12.html" title="ubuntu一键配置ssh root登陆脚本">ubuntu一键配置ssh root登陆脚本</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-09T05:17:32.000Z" title="发表于 2023-08-09 13:17:32">2023-08-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/">技术类</a></span></div><div class="content">这几天实在是没有什么灵感，不如来淦我的服务器吧。我发现ubuntu一开始注册账户，或者使用账户，都类似管理员级别的账号，不进入到root就不能安装各种需要root的应用宝塔就是这样，每次点击docker终端都会提示权限不足。每次进入ssh都要su root.为了解决以上困扰，我写了个小脚本脚本如下: 123456789101112131415#!/bin/bashclearecho "欢迎使用ubuntu切换root登陆程序"echo "博客:&lt;a href="&lt;a href="&lt;a href="https://www.nuoyis.net"""" title="https://www.nuoyis.net""""&gt;https://www.nuoyis.net"""&lt;/a&gt; title="&lt;a href="https://www.nuoyis.net"""&gt;https://www.nuoyis.net""" title="https://www.nuoyis.net"""&gt;https://www.nuoyis.net"""&gt;h ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/ce1f.html" title="使用frp内网映射教程"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?8193" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="使用frp内网映射教程"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/ce1f.html" title="使用frp内网映射教程">使用frp内网映射教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-08T04:18:00.000Z" title="发表于 2023-08-08 12:18:00">2023-08-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/">技术类</a></span></div><div class="content">之前写过一篇，目前可能有部分丢失，现在重新写了一份。frp是内网或者超大内网内的数据与资源映射到公网的一款软件，我们用它来完成家庭内部局域网的访问/网站搭建，目前能做到稳定内网映射的是下面三家 openfrp地址:https://openfrp.netSAKURA FRP地址:https://www.natfrp.com花生壳地址:https://hsk.oray.com 花生壳虽然较坑，域名得转入花生壳，还得忍受只有80端口的样子，流量就1到2g。樱花frp听过没正式使用过，和我现用openfrp差不多的样子。openfrp目前我觉得免费速度可以的是30 # 香港-5「CN2」 31 # 香港-6「CN2」,在可用不足前这两个可以做到国内一片绿。付费就无脑选1和2就行了，速度和免费方面感觉没啥差别。 下面正式搭建frps(服务器方面)首先服务端下载frp的压缩包，如果你是linux 64位不是arm就选那个amd64，反之选386下载地址:https://github.com/fatedier/frp/releases下载好后解压命令(记得文件夹内解压): 12mkdir / ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/1b2b.html" title="突然发现生活被塞满了"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?1341" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="突然发现生活被塞满了"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/1b2b.html" title="突然发现生活被塞满了">突然发现生活被塞满了</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-07T23:29:00.000Z" title="发表于 2023-08-08 07:29:00">2023-08-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/uncategorized/">uncategorized</a></span></div><div class="content">感觉最近文章灵感创作度降低了许多，不如日记簿多加入些生活气息。为什么我的生活被塞满了？高三的生活刚结束，18岁交接大学期间不仅需要预测大学所学的内容，还得时不时访问网站是不是挂了。另外有群友或者做大的企业客户都来问我很多搭建问题，我也是一一回复的。有时候晚上9点想睡觉的时候，一个求帮忙的消息就发过来了。然后忙活了大半个小时甚至几天，解决了他的问题。最后就是撸代码，毕竟还是与大学计算机的云计算接轨的。暑假适当清清游戏任务就放一边，开始撸代码。因为父母又给我报了驾校，有时候得很早起来练车，有时候下午练车，到了晚上快睡觉前还得刷刷科一。然后今天科一过了，所以腾出了时间给博客写写文章。上次更新已经是4天前。本来昨天想要更新的，结果直接写文章写着发现docker有问题，就得重新生成。再就是看b站部分的测评，不知不觉就看了一下午。时间如白驹过隙,转瞬即逝。暑假很快也到了8月。距离上学还有23天的样子，抓紧研发和写出新的文章吧。End</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/1c94.html" title="无人直播 - srs-cloud安装方法"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?990" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="无人直播 - srs-cloud安装方法"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/1c94.html" title="无人直播 - srs-cloud安装方法">无人直播 - srs-cloud安装方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-07T23:05:00.000Z" title="发表于 2023-08-08 07:05:00">2023-08-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/">技术类</a></span></div><div class="content">由于本博客之前编写过安装docker和宝塔的方法，所以我将安装docker教程和安装宝塔教程放在下面。 宝塔安装教程:https://www.nuoyis.net/244.htmldocker安装教程:https://www.nuoyis.net/492.html 这里用宝塔就会方便许多，直接插件内搜索 直播 就行了。找到SRS音视频服务器安装后点击启动。如下图所示看到安装完成即可 docker版本搭建方法：输入以下命令官方库:https://github.com/ossrs/srs-cloud 123docker run --rm -it -p 2022:2022 -p 1935:1935/tcp -p 1985:1985/tcp \ -p 8080:8080/tcp -p 8000:8000/udp -p 10080:10080/udp --name srs-cloud \ -v $HOME/db:/data ossrs/srs-cloud:1 搭建好后，直接如下图配置好(推流地址和密钥每个平台获取必须实名认证)检查状态查看直播是否在播放(我的直播间:http:/ ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#content-inner">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/#content-inner">12</a><a class="extend next" rel="next" href="/page/5/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&amp;spec=640&amp;img_type=jpg" onerror='this.onerror=null,this.src="/img/friend_404.gif"' alt="avatar"></div><div class="author-info__name">诺依阁</div><div class="author-info__description">一个记录技术的日记簿</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">117</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/nuoyis"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">如果有想学习交流的童鞋可以加入我们的群聊聊天哦,群号:607600879<br>日记簿框架已更换为hexo,如果你需要观看新的文章需要浏览器清除缓存</div></div><div class="card-widget nuoyis-ad" id="nuoyis-ad"><div class="item-headline"><i class="fa-solid fa-rectangle-ad"></i><span>广告</span></div><div class="item-content"><a href="https://blog.nuoyis.net">诺依阁推广</a><br>核心赞助:诺依阁的代理卡铺：<a target="_blank" rel="noopener" href="https://haokawx.lot-ml.com/Product/Index/415968">https://haokawx.lot-ml.com/Product/Index/415968</a><br>赞助商1:雨云四周年活动优惠持续发布<br>现在加入雨云最高享受7折优惠<br>优惠通道 <a target="_blank" href="https://www.rainyun.com/nuoyis_">https://www.rainyun.com/nuoyis_</a><br>注册立即领取无门槛5元代金券<br>赞助商2:<a target="_blank" href="https://www.wivps.com/aff/SPRYLBHY" title="推荐卫云计算">稳定低价高速抗打，就上卫云计算</a><br>赞助商3:<a target="_blank" href="https://idc.yeyuing.cn/aff/PBGQAEYZ" title="推荐二蛋云">稳定低价高速抗打，就上二蛋云</a> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4015694772463475" data-ad-slot="8371555862" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script><br>注:本站产品推广只是推广,不负任何跑路责任。文章有侵权和不合法内容，<a target="_blank" rel="noopener" href="https://wj.qq.com/s2/12523658/3494/">请点击这里</a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/9bb5.html" title="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?2718" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧"></a><div class="content"><a class="title" href="/posts/9bb5.html" title="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧">用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧</a><time datetime="2024-07-26T23:05:36.000Z" title="发表于 2024-07-27 07:05:36">2024-07-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/92c1.html" title="RHEL9-Rocky9-Openeuler下载方法"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?1534" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="RHEL9-Rocky9-Openeuler下载方法"></a><div class="content"><a class="title" href="/posts/92c1.html" title="RHEL9-Rocky9-Openeuler下载方法">RHEL9-Rocky9-Openeuler下载方法</a><time datetime="2024-07-07T04:04:00.000Z" title="发表于 2024-07-07 12:04:00">2024-07-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/6465.html" title="Docker用法合集"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?4253" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="Docker用法合集"></a><div class="content"><a class="title" href="/posts/6465.html" title="Docker用法合集">Docker用法合集</a><time datetime="2024-05-23T22:23:00.000Z" title="发表于 2024-05-24 06:23:00">2024-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f52a.html" title="以 RHCL9 做路由器分配教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?5260" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="以 RHCL9 做路由器分配教程"></a><div class="content"><a class="title" href="/posts/f52a.html" title="以 RHCL9 做路由器分配教程">以 RHCL9 做路由器分配教程</a><time datetime="2024-05-10T19:36:00.000Z" title="发表于 2024-05-11 03:36:00">2024-05-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f02.html" title="RHCL 9 合集"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?8671" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="RHCL 9 合集"></a><div class="content"><a class="title" href="/posts/f02.html" title="RHCL 9 合集">RHCL 9 合集</a><time datetime="2024-05-10T01:54:00.000Z" title="发表于 2024-05-10 09:54:00">2024-05-10</time></div></div></div></div><div class="card-widget ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-4015694772463475" data-ad-slot="3926138616"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">117</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishdate="2019-12-30T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastpushdate="2024-08-25T09:42:50.078Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background:0 0"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 诺依阁</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" title="又拍云CDN站长联盟扶持" style="cursor:url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;),pointer"><span class="badge-subject">云存储/CDN提供商</span><span class="badge-value bg-color-tianyi">又拍云</span></a> | <a href="http://www.west.cn/" title="虚拟主机-域名注册-主机租用-服务器租用" target="_blank">云服务器</a> | <a href="https://icp.gov.moe/?keyword=20240331" target="_blank">萌ICP备20240331号</a><br><a href="//beian.miit.gov.cn" target="_blank" title="鄂ICP备2023004941号-2" style="cursor:url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;),pointer"><span class="badge-subject">鄂ICP备</span><span class="badge-value bg-color-tianyi">2023004941号-2</span> </a>| <a href="//www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011702000752" target="_blank" title="鄂公网安备42011702000752号" style="cursor:url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;),pointer"><span class="badge-subject">鄂公网安备</span><span class="badge-value bg-color-tianyi">42011702000752号</span></a><br><a target="_blank" rel="noopener" href="https://www.esoot.com">易搜特收录网 </a>| <a target="_blank" rel="noopener" href="https://www.luoca.net/">雒收录</a> | 本站部分CSS由<a target="_blank" rel="noopener" href="https://lolicon.team/">紗夕里</a>提供<br>全站由<a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral" title="又拍云CDN" alt="又拍云CDN"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.nuoyis.net/assets/upyun_logo-CJhLbS30.webp" style="margin-bottom:-10px;margin-left:3px" alt="CDN" width="70" height="35"></a>和<a href="https://www.sctes.com/" target="_blank"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.sctes.com/assets/logo.svg" alt="无畏云" width="55" height="24"></a>提供CDN加速/云存储服务</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/utils.min.js"></script><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/main.min.js"></script><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/tw_cn.min.js"></script><script src="https://lib.baomitu.com/fancyapps-ui/5.0.32/fancybox/fancybox.umd.min.js"></script><script src="https://lib.baomitu.com/vanilla-lazyload/17.8.5/lazyload.iife.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://lib.baomitu.com/typed.js/2.1.0/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}</script><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = []
+        sub.unshift(data.hitokoto, from)
+        typedJSFn.init(sub)
+      } else {
+        document.getElementById('subtitle').textContent = data.hitokoto
+      }
+    })
+}
+typedJSFn.run(subtitleType)</script></div><script src="https://server-api.nuoyis.net/live2d/autoload.js"></script><script type="text/javascript" src="https://static.nuoyis.net/private/aboutme/main/js/hua.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span> 数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/search/local-search.min.js"></script></div></div></body></html>

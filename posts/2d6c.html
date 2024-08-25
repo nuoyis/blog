@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>DDOS攻击讲堂 | 诺依阁的日记簿</title><meta name="author" content="诺依阁,wkkjonlykang@vip.qq.com"><meta name="copyright" content="诺依阁"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="DDOS是一种分布式拒绝攻击，在我们计算机这类科目中，会发现它对我们的服务器或者工作站以及主机威胁十分巨大，毕竟它是伪装成正常访问，然后大量访问你服务器的资源，造成其他用户无法使用。 对于DDOS来说，我将其分为八大类： 1、基于自动化程度分类 （1）手工的DDoS攻击。 早期的DDoS攻击全是采用手动配置的，即发动DDoS攻击时，扫描远端有漏洞的计算机，侵入它们并且安装代码全是手动完成的。 （2"><meta property="og:type" content="article"><meta property="og:title" content="DDOS攻击讲堂"><meta property="og:url" content="https://blog.nuoyis.net/posts/2d6c.html"><meta property="og:site_name" content="诺依阁的日记簿"><meta property="og:description" content="DDOS是一种分布式拒绝攻击，在我们计算机这类科目中，会发现它对我们的服务器或者工作站以及主机威胁十分巨大，毕竟它是伪装成正常访问，然后大量访问你服务器的资源，造成其他用户无法使用。 对于DDOS来说，我将其分为八大类： 1、基于自动化程度分类 （1）手工的DDoS攻击。 早期的DDoS攻击全是采用手动配置的，即发动DDoS攻击时，扫描远端有漏洞的计算机，侵入它们并且安装代码全是手动完成的。 （2"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://server-api.nuoyis.net/acg/?yasuo=1?6220"><meta property="article:published_time" content="2021-05-13T06:29:00.000Z"><meta property="article:modified_time" content="2024-08-25T09:42:24.325Z"><meta property="article:author" content="诺依阁"><meta property="article:tag" content="typecho,php,blog,诺依阁,站长,系统安装,环境搭建,服务器,站长,诺依阁的日常记录,生活,技术,科技,日记,诺依阁的日记簿,博客,云服务器,白嫖,自媒体,树洞空间"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://server-api.nuoyis.net/acg/?yasuo=1?6220"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://blog.nuoyis.net/posts/2d6c.html"><link rel="preconnect" href="https://lib.baomitu.com"><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/6.5.1/css/all.min.css"><link rel="stylesheet" href="https://lib.baomitu.com/fancyapps-ui/5.0.32/fancybox/fancybox.min.css" media="print" onload='this.media="all"'><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-4015694772463475",enable_page_level_ads:"true"})</script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?2c790c11308ab98338b82482af6a4ff1";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://lib.baomitu.com/egjs-infinitegrid/4.11.0/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"DDOS攻击讲堂",isPost:!0,isHome:!1,isHighlightShrink:!1,isToc:!1,postUpdate:"2024-08-25 17:42:24"}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="https://static.nuoyis.net/libs/blog/typecho/themes/butterfly/static/css/Hanasaki.css"><meta name="generator" content="Hexo 7.3.0"><style>.github-emoji{position:relative;display:inline-block;width:1.2em;min-height:1.2em;overflow:hidden;vertical-align:top;color:transparent}.github-emoji>span{position:relative;z-index:10}.github-emoji .fancybox,.github-emoji img{margin:0!important;padding:0!important;border:none!important;outline:0!important;text-decoration:none!important;user-select:none!important;cursor:auto!important}.github-emoji img{height:1.2em!important;width:1.2em!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;user-select:none!important;cursor:auto!important}.github-emoji-fallback{color:inherit}.github-emoji-fallback img{opacity:0!important}</style><link rel="alternate" href="/atom.xml" title="诺依阁的日记簿" type="application/atom+xml"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&amp;spec=640&amp;img_type=jpg" onerror='onerror=null,src="/img/friend_404.gif"' alt="avatar"></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">117</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></div><div class="menus_item"><a class="site-page" href="/youlian/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image:url(https://server-api.nuoyis.net/acg/?yasuo=1?6220)"><nav id="nav"><span id="blog-info"><a href="/" title="诺依阁的日记簿"><span class="site-name">诺依阁的日记簿</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></div><div class="menus_item"><a class="site-page" href="/youlian/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">DDOS攻击讲堂</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-05-13T06:29:00.000Z" title="发表于 2021-05-13 14:29:00">2021-05-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-25T09:42:24.325Z" title="更新于 2024-08-25 17:42:24">2024-08-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B%E7%B1%BB/">教程类</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" data-flag-title="DDOS攻击讲堂"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>DDOS是一种分布式拒绝攻击，在我们计算机这类科目中，会发现它对我们的服务器或者工作站以及主机威胁十分巨大，毕竟它是伪装成正常访问，然后大量访问你服务器的资源，造成其他用户无法使用。</p><p>对于DDOS来说，我将其分为八大类：</p><p><strong>1、基于自动化程度分类</strong></p><p>（1）手工的DDoS攻击。</p><p>早期的DDoS攻击全是采用手动配置的，即发动DDoS攻击时，扫描远端有漏洞的计算机，侵入它们并且安装代码全是手动完成的。</p><p>（2）半自动化的DDoS攻击。</p><p>在半自动化的攻击中，DDoS攻击属于主控端一代理端的攻击模型，攻击者用自动化的Scripts来扫描，主控端的机器对主控端和代理端之间进行协商攻击的类型、受害者的地址、何时发起攻击等信息由进行详细记录。</p><p>（3）自动化的DDoS攻击。</p><p>在这类攻击中。攻击者和代理端机器之间的通信是绝对不允许的。这类攻击的攻击阶段绝大部分被限制用一个单一的命令来实现，攻击的所有特征，例如攻击的类型，持续的时间和受害者的地址在攻击代码中都预先用程序实现。</p><p><strong>2、基于系统及协议的弱点分类</strong></p><p>（1）洪水攻击。</p><p>在洪水攻击中。傀儡机向受害者系统发送大量的数据流为了充塞受害者系统的带宽，影响小的则降低受害者提供的服务，影响大的则使整个网络带宽持续饱和，以至于网络服务瘫痪。典型的洪水攻击有UDP洪水攻击和ICMP洪水攻击。</p><p>（2）扩大攻击。</p><p>扩大攻击分为两种，一种是利用广播lP地址的特性，一种是利用反射体来发动攻击。前一种攻击者是利用了广播IP地址的特性来扩大和映射攻击，导致路由器将数据包发送到整个网络的广播地址列表中的所有的广播IP地址。这些恶意的流量将减少受害者系统可提供的带宽。典型的扩大攻击有Smurf和Fraggle攻击。</p><p>（3）利用协议的攻击。</p><p>该类攻击则是利用某些协议的特性或者利用了安装在受害者机器上的协议中存在的漏洞来耗尽它的大量资源。典型的利用协议攻击的例子是TCP SYN攻击。</p><p>（4）畸形数据包攻击。</p><p>攻击者通过向受害者发送不正确的IP地址的数据包，导致受害系统崩溃。畸形数据包攻击可分为两种类型：IP地址攻击和IP数据包属性攻击。</p><p><strong>4、基于攻击速率分类</strong></p><p>DDoS攻击从基于速率上进行分类，可以分为持续速率和可变速率的攻击。持续速率的攻击是指只要开始发起攻击，就用全力不停顿也不消减力量。像这种攻击的影响是非常快的。可变速率的攻击，从名字就可以看出，用不同的攻击速率，基于这种速率改变的机制，可以把这种攻击分为增加速率和波动的速率。&nbsp;[4]</p><p><strong>5、基于影响力进行分类</strong></p><p>DDoS攻击从基于影响力方面可以分为网络服务彻底崩溃和降低网络服务的攻击。服务彻底崩溃的攻击将导致受害者的服务器完全拒绝对客户端提供服务。降低网络服务的攻击，消耗受害者系统的一部分资源，这将延迟攻击被发现的时间，同时对受害者造成一定的破坏。&nbsp;[4]</p><p><strong>6、基于入侵目标分类</strong></p><p>DDoS攻击从基于入侵目标，可以将DDoS攻击分为带宽攻击和连通性攻击，带宽攻击通过使用大量的数据包来淹没整个网络，使得有效的网络资源被浪费，合法朋户的请求得不到响应，大大降低了效率。而连通性攻击是通过发送大量的请求来使的计算机瘫痪，所有有效的操作系统资源被耗尽，导致计算机不能够再处理合法的用户请求。&nbsp;[4]</p><p><strong>7、基于攻击路线分类</strong></p><p>（1）直接攻击：攻击者和主控端通信，主控端接到攻击者的命令后，再控制代理端向受害者发动攻击数据流。代理端向受害者系统发送大量的伪IP地址的网络数据流，这样攻击者很难被追查到。</p><p>（2）反复式攻击通过利用反射体，发动更强大的攻击流。反射体是任何一台主机只要发送一个数据包就能收到一个数据包，反复式攻击就是攻击者利用中间的网络节点发动攻击。</p><p><strong>8、基于攻击特征分类</strong></p><p>从攻击特征的角度，可以将DDoS攻击分为攻击行为特征可提取和攻击行为特征不可提取两类。攻击行为特征可提取的DDoS攻击又可以细分为可过滤型和不可过滤型。可过滤型的DDoS攻击主要指那些使用畸形的非法数据包。不可过滤型DDoS攻击通过使用精心设计的数据包，模仿合法用户的正常请求所用的数据包，一旦这类数据包被过滤将会影响合法用户的正常使用。</p><p>对于这种情况，我想了三个应对措施。</p><p><strong>1、</strong>在一些发布平台上面不要用直接套着服务器IP进行访问，毕竟这样永远是无法成功拦截这些伪装访问者。</p><p><strong>2、</strong>服务器请求与服务器资源分布式发送数据（例如内容分发网络cdn），即使被DDOS了，打的也是一个节点，能暂时正常运行网站。</p><p><strong>3、不要做对不起别人的事情，避免自己遭殃。</strong></p><p>今天知识的普及到这里，感谢大家</p></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.nuoyis.net">诺依阁</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.nuoyis.net/posts/2d6c.html">https://blog.nuoyis.net/posts/2d6c.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.nuoyis.net" target="_blank">诺依阁的日记簿</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://server-api.nuoyis.net/acg/?yasuo=1?6220" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://lib.baomitu.com/butterfly-extsrc/1.1.3/sharejs/dist/css/share.min.css" media="print" onload='this.media="all"'><script src="https://lib.baomitu.com/butterfly-extsrc/1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-4015694772463475" data-ad-slot="3926138616"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/posts/1ac7.html" title="QR词库以及网站配置"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?87" onerror='onerror=null,src="/img/404.jpg"' alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">QR词库以及网站配置</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&amp;spec=640&amp;img_type=jpg" onerror='this.onerror=null,this.src="/img/friend_404.gif"' alt="avatar"></div><div class="author-info__name">诺依阁</div><div class="author-info__description">一个记录技术的日记簿</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">117</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/nuoyis"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">如果有想学习交流的童鞋可以加入我们的群聊聊天哦,群号:607600879<br>日记簿框架已更换为hexo,如果你需要观看新的文章需要浏览器清除缓存</div></div><div class="card-widget nuoyis-ad" id="nuoyis-ad"><div class="item-headline"><i class="fa-solid fa-rectangle-ad"></i><span>广告</span></div><div class="item-content"><a href="https://blog.nuoyis.net">诺依阁推广</a><br>核心赞助:诺依阁的代理卡铺：<a target="_blank" rel="noopener" href="https://haokawx.lot-ml.com/Product/Index/415968">https://haokawx.lot-ml.com/Product/Index/415968</a><br>赞助商1:雨云四周年活动优惠持续发布<br>现在加入雨云最高享受7折优惠<br>优惠通道 <a target="_blank" href="https://www.rainyun.com/nuoyis_">https://www.rainyun.com/nuoyis_</a><br>注册立即领取无门槛5元代金券<br>赞助商2:<a target="_blank" href="https://www.wivps.com/aff/SPRYLBHY" title="推荐卫云计算">稳定低价高速抗打，就上卫云计算</a><br>赞助商3:<a target="_blank" href="https://idc.yeyuing.cn/aff/PBGQAEYZ" title="推荐二蛋云">稳定低价高速抗打，就上二蛋云</a> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4015694772463475" data-ad-slot="8371555862" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script><br>注:本站产品推广只是推广,不负任何跑路责任。文章有侵权和不合法内容，<a target="_blank" rel="noopener" href="https://wj.qq.com/s2/12523658/3494/">请点击这里</a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/9bb5.html" title="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?2718" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧"></a><div class="content"><a class="title" href="/posts/9bb5.html" title="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧">用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧</a><time datetime="2024-07-26T23:05:36.000Z" title="发表于 2024-07-27 07:05:36">2024-07-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/92c1.html" title="RHEL9-Rocky9-Openeuler下载方法"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?1534" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="RHEL9-Rocky9-Openeuler下载方法"></a><div class="content"><a class="title" href="/posts/92c1.html" title="RHEL9-Rocky9-Openeuler下载方法">RHEL9-Rocky9-Openeuler下载方法</a><time datetime="2024-07-07T04:04:00.000Z" title="发表于 2024-07-07 12:04:00">2024-07-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/6465.html" title="Docker用法合集"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?4253" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="Docker用法合集"></a><div class="content"><a class="title" href="/posts/6465.html" title="Docker用法合集">Docker用法合集</a><time datetime="2024-05-23T22:23:00.000Z" title="发表于 2024-05-24 06:23:00">2024-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f52a.html" title="以 RHCL9 做路由器分配教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?5260" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="以 RHCL9 做路由器分配教程"></a><div class="content"><a class="title" href="/posts/f52a.html" title="以 RHCL9 做路由器分配教程">以 RHCL9 做路由器分配教程</a><time datetime="2024-05-10T19:36:00.000Z" title="发表于 2024-05-11 03:36:00">2024-05-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f02.html" title="RHCL 9 合集"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?8671" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="RHCL 9 合集"></a><div class="content"><a class="title" href="/posts/f02.html" title="RHCL 9 合集">RHCL 9 合集</a><time datetime="2024-05-10T01:54:00.000Z" title="发表于 2024-05-10 09:54:00">2024-05-10</time></div></div></div></div><div class="card-widget ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-4015694772463475" data-ad-slot="3926138616"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></div></div></main><footer id="footer" style="background:0 0"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 诺依阁</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" title="又拍云CDN站长联盟扶持" style="cursor:url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;),pointer"><span class="badge-subject">云存储/CDN提供商</span><span class="badge-value bg-color-tianyi">又拍云</span></a> | <a href="http://www.west.cn/" title="虚拟主机-域名注册-主机租用-服务器租用" target="_blank">云服务器</a> | <a href="https://icp.gov.moe/?keyword=20240331" target="_blank">萌ICP备20240331号</a><br><a href="//beian.miit.gov.cn" target="_blank" title="鄂ICP备2023004941号-2" style="cursor:url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;),pointer"><span class="badge-subject">鄂ICP备</span><span class="badge-value bg-color-tianyi">2023004941号-2</span> </a>| <a href="//www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011702000752" target="_blank" title="鄂公网安备42011702000752号" style="cursor:url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;),pointer"><span class="badge-subject">鄂公网安备</span><span class="badge-value bg-color-tianyi">42011702000752号</span></a><br><a target="_blank" rel="noopener" href="https://www.esoot.com">易搜特收录网 </a>| <a target="_blank" rel="noopener" href="https://www.luoca.net/">雒收录</a> | 本站部分CSS由<a target="_blank" rel="noopener" href="https://lolicon.team/">紗夕里</a>提供<br>全站由<a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral" title="又拍云CDN" alt="又拍云CDN"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.nuoyis.net/assets/upyun_logo-CJhLbS30.webp" style="margin-bottom:-10px;margin-left:3px" alt="CDN" width="70" height="35"></a>和<a href="https://www.sctes.com/" target="_blank"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.sctes.com/assets/logo.svg" alt="无畏云" width="55" height="24"></a>提供CDN加速/云存储服务</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/utils.min.js"></script><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/main.min.js"></script><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/tw_cn.min.js"></script><script src="https://lib.baomitu.com/fancyapps-ui/5.0.32/fancybox/fancybox.umd.min.js"></script><script src="https://lib.baomitu.com/vanilla-lazyload/17.8.5/lazyload.iife.min.js"></script><div class="js-pjax"></div><script src="https://server-api.nuoyis.net/live2d/autoload.js"></script><script type="text/javascript" src="https://static.nuoyis.net/private/aboutme/main/js/hua.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span> 数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/search/local-search.min.js"></script></div></div></body></html>

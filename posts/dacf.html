@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>原神QQ机器人指令集合 | 诺依阁的日记簿</title><meta name="author" content="诺依阁,wkkjonlykang@vip.qq.com"><meta name="copyright" content="诺依阁"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="先点击链接加入群聊【提瓦特的乐章】后再操作：https:&#x2F;&#x2F;jq.qq.com&#x2F;?_wv&#x3D;1027&amp;k&#x3D;7kyb2E1u#角色    米游社角色数据查询 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364"><meta property="og:type" content="article"><meta property="og:title" content="原神QQ机器人指令集合"><meta property="og:url" content="https://blog.nuoyis.net/posts/dacf.html"><meta property="og:site_name" content="诺依阁的日记簿"><meta property="og:description" content="先点击链接加入群聊【提瓦特的乐章】后再操作：https:&#x2F;&#x2F;jq.qq.com&#x2F;?_wv&#x3D;1027&amp;k&#x3D;7kyb2E1u#角色    米游社角色数据查询 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://server-api.nuoyis.net/acg/?yasuo=1?3709"><meta property="article:published_time" content="2022-09-29T09:35:00.000Z"><meta property="article:modified_time" content="2024-08-25T09:42:24.329Z"><meta property="article:author" content="诺依阁"><meta property="article:tag" content="typecho,php,blog,诺依阁,站长,系统安装,环境搭建,服务器,站长,诺依阁的日常记录,生活,技术,科技,日记,诺依阁的日记簿,博客,云服务器,白嫖,自媒体,树洞空间"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://server-api.nuoyis.net/acg/?yasuo=1?3709"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://blog.nuoyis.net/posts/dacf.html"><link rel="preconnect" href="https://lib.baomitu.com"><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/6.5.1/css/all.min.css"><link rel="stylesheet" href="https://lib.baomitu.com/fancyapps-ui/5.0.32/fancybox/fancybox.min.css" media="print" onload='this.media="all"'><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-4015694772463475",enable_page_level_ads:"true"})</script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?2c790c11308ab98338b82482af6a4ff1";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://lib.baomitu.com/egjs-infinitegrid/4.11.0/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"原神QQ机器人指令集合",isPost:!0,isHome:!1,isHighlightShrink:!1,isToc:!1,postUpdate:"2024-08-25 17:42:24"}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="https://static.nuoyis.net/libs/blog/typecho/themes/butterfly/static/css/Hanasaki.css"><meta name="generator" content="Hexo 7.3.0"><style>.github-emoji{position:relative;display:inline-block;width:1.2em;min-height:1.2em;overflow:hidden;vertical-align:top;color:transparent}.github-emoji>span{position:relative;z-index:10}.github-emoji .fancybox,.github-emoji img{margin:0!important;padding:0!important;border:none!important;outline:0!important;text-decoration:none!important;user-select:none!important;cursor:auto!important}.github-emoji img{height:1.2em!important;width:1.2em!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;user-select:none!important;cursor:auto!important}.github-emoji-fallback{color:inherit}.github-emoji-fallback img{opacity:0!important}</style><link rel="alternate" href="/atom.xml" title="诺依阁的日记簿" type="application/atom+xml"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&amp;spec=640&amp;img_type=jpg" onerror='onerror=null,src="/img/friend_404.gif"' alt="avatar"></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">117</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></div><div class="menus_item"><a class="site-page" href="/youlian/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image:url(https://server-api.nuoyis.net/acg/?yasuo=1?3709)"><nav id="nav"><span id="blog-info"><a href="/" title="诺依阁的日记簿"><span class="site-name">诺依阁的日记簿</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></div><div class="menus_item"><a class="site-page" href="/youlian/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">原神QQ机器人指令集合</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-29T09:35:00.000Z" title="发表于 2022-09-29 17:35:00">2022-09-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-25T09:42:24.329Z" title="更新于 2024-08-25 17:42:24">2024-08-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/">技术类</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" data-flag-title="原神QQ机器人指令集合"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>先点击链接加入群聊【提瓦特的乐章】后再操作：<a target="_blank" rel="noopener" href="https://jq.qq.com/?_wv=1027&amp;k=7kyb2E1u">https://jq.qq.com/?_wv=1027&amp;k=7kyb2E1u</a>#角色 米游社角色数据查询</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line">#探险    米游社角色数据查询</span><br><span class="line">#角色卡片    米游社角色数据查询</span><br><span class="line">#刻晴    米游社角色详情查询</span><br><span class="line">#武器    米游社角色详情武器查询</span><br><span class="line">#五星，#四星，#角色背包    米游社角色详情背包</span><br><span class="line">#深渊    米游社深渊查询</span><br><span class="line">#深渊十二层    米游社深渊层数查询</span><br><span class="line">#刻晴突破，#刻晴素材    米游社友人A的角色突破素材图</span><br><span class="line">#刻晴攻略    米游社西风攻略</span><br><span class="line">#练度统计，#五星列表，#天赋列表    米游社角色详情列表</span><br><span class="line">#体力    原神体力查询</span><br><span class="line">#签到    米游社原神签到，自动签到</span><br><span class="line">#开启、关闭签到    开启或关闭原神自动签到</span><br><span class="line">#全部签到    签到全部ck</span><br><span class="line">#原石、#原石七月    查询米游社原石札记</span><br><span class="line">#原石统计    查询米游社原石札记，会自动保存数据</span><br><span class="line">#原石任务    保存米游社原石札记数据</span><br><span class="line">#今日素材    按已拥有角色查询今日素材</span><br><span class="line">#公告，#公告2，#资讯，#活动    米游社原神最新20条公告资讯</span><br><span class="line">#米游社xxx    米游社原神帖子搜索，如#米游社七七</span><br><span class="line">#开启、关闭公告推送，#开启、关闭资讯推送    米游社原神公告资讯推送</span><br><span class="line">#原石预估    新版本可获取原石数量预估</span><br><span class="line">抽卡指令    说明</span><br><span class="line">#十连    原神模拟十连抽卡，角色池，默认每日一次，四点更新</span><br><span class="line">#十连武器    原神模拟十连抽卡</span><br><span class="line">#十连常驻    原神模拟十连抽卡</span><br><span class="line">#定轨    武器池定轨</span><br><span class="line">ck指令    说明</span><br><span class="line">体力帮助，cookie帮助    cookie绑定教程</span><br><span class="line">cookie代码    获取cookie的js代码</span><br><span class="line">#绑定cookie    绑定米游社cookie</span><br><span class="line">#删除cookie    删除绑定的cookie</span><br><span class="line">#绑定uid    绑定游戏的uid</span><br><span class="line">#uid    显示已绑定cookie的uid</span><br><span class="line">#我的ck    当前绑定的主cookie</span><br><span class="line">抽卡记录指令    说明</span><br><span class="line">抽卡记录链接    发送链接，导入抽卡记录</span><br><span class="line">#角色记录    统计抽卡数据</span><br><span class="line">#武器记录    统计抽卡数据</span><br><span class="line">#常驻记录    统计抽卡数据</span><br><span class="line">#角色统计    统计抽卡数据，按卡池统计</span><br><span class="line">#武器统计    统计抽卡数据，按卡池统计</span><br><span class="line">#常驻统计    统计抽卡数据，按卡池统计</span><br><span class="line">#记录帮助    抽卡记录导入说明</span><br><span class="line">#导出记录    抽卡记录xlsx导出</span><br><span class="line">#导出记录json    抽卡记录json导出</span><br><span class="line">xlsx文件导入    xlsx导入，统一可交换祈愿记录v2.2，需要加好友</span><br><span class="line">json文件导入    json导入，统一可交换祈愿记录v2.2，需要加好友</span><br><span class="line">其他指令    说明</span><br><span class="line">#帮助    帮助命令说明</span><br><span class="line">#状态    查询发送消息数据，群聊则发送群数据</span><br><span class="line">#重启    重新启动</span><br><span class="line">#日志    查看运行日志</span><br><span class="line">#错误日志    查看错误日志</span><br><span class="line">#日志关键词    搜索日志</span><br><span class="line">#更新    执行git pull拉取更新</span><br><span class="line">#强制更新    放弃本地修改，强制拉取</span><br><span class="line">#全部更新    全部插件更新</span><br><span class="line">#更新日志    最近50条commit记录</span><br><span class="line">#添加xxx    添加表情，文字等内容，支持多个</span><br><span class="line">#添加图片    添加图片默认为表情，大图显示请用添加图片</span><br><span class="line">#删除xxx    删除已添加表情</span><br><span class="line">#删除全部    删除全部表情</span><br><span class="line">#表情列表    显示已添加内容</span><br><span class="line">#表情xxx    搜索已添加内容</span><br><span class="line">#设置刻晴别名    自定义别名</span><br><span class="line">#删除别名龟龟    删除设置的别名</span><br><span class="line">#刻晴别名    别名列表</span><br><span class="line">#配置ck    添加公共查询ck</span><br><span class="line">#使用用户ck    将用户ck加入到公共查询ck池</span><br><span class="line">#雷神面板 可更改为其他角色</span><br><span class="line">#更新面板</span><br><span class="line">#雷神伤害</span><br><span class="line">#雷神圣遗物</span><br><span class="line">「塔罗牌」占卜</span><br><span class="line">「每日一题」LeetCode 每日一题</span><br><span class="line">「随机一题(easy/medium/hard)」LeetCode 随机一题</span><br><span class="line">如：随机一题hard</span><br><span class="line">「今日/昨日题解」查看答案</span><br><span class="line">「r/roll」骰子</span><br><span class="line">r (随便什么文本，可以为空) a b 即在 a 和 b 之间 roll 一个数字</span><br><span class="line">roll a b c 即随机选出 a, b, c 中的一个</span><br><span class="line">「(咱)今天吃什么」美食推荐</span><br><span class="line">今天吃什么会考虑基本菜单和群菜单</span><br><span class="line">咱今天吃什么只考虑群菜单</span><br><span class="line">「添加/删除食物」更改群菜单，后面接食物（可以有多个，空格分隔）</span><br><span class="line">如：添加食物 kfc 麦当当</span><br><span class="line">「tex」生成公式对应图片</span><br><span class="line">如：tex 1+1=2</span><br><span class="line">「markdown」同上</span><br></pre></td></tr></tbody></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.nuoyis.net">诺依阁</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.nuoyis.net/posts/dacf.html">https://blog.nuoyis.net/posts/dacf.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.nuoyis.net" target="_blank">诺依阁的日记簿</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://server-api.nuoyis.net/acg/?yasuo=1?3709" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://lib.baomitu.com/butterfly-extsrc/1.1.3/sharejs/dist/css/share.min.css" media="print" onload='this.media="all"'><script src="https://lib.baomitu.com/butterfly-extsrc/1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-4015694772463475" data-ad-slot="3926138616"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/76f7.html" title="Linux-安装nginx改造升级版(Tengine)"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?5572" onerror='onerror=null,src="/img/404.jpg"' alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Linux-安装nginx改造升级版(Tengine)</div></div></a></div><div class="next-post pull-right"><a href="/posts/d9e2.html" title="博客(wordpress,typecho)安装教程"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?755" onerror='onerror=null,src="/img/404.jpg"' alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">博客(wordpress,typecho)安装教程</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&amp;spec=640&amp;img_type=jpg" onerror='this.onerror=null,this.src="/img/friend_404.gif"' alt="avatar"></div><div class="author-info__name">诺依阁</div><div class="author-info__description">一个记录技术的日记簿</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">117</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/nuoyis"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">如果有想学习交流的童鞋可以加入我们的群聊聊天哦,群号:607600879<br>日记簿框架已更换为hexo,如果你需要观看新的文章需要浏览器清除缓存</div></div><div class="card-widget nuoyis-ad" id="nuoyis-ad"><div class="item-headline"><i class="fa-solid fa-rectangle-ad"></i><span>广告</span></div><div class="item-content"><a href="https://blog.nuoyis.net">诺依阁推广</a><br>核心赞助:诺依阁的代理卡铺：<a target="_blank" rel="noopener" href="https://haokawx.lot-ml.com/Product/Index/415968">https://haokawx.lot-ml.com/Product/Index/415968</a><br>赞助商1:雨云四周年活动优惠持续发布<br>现在加入雨云最高享受7折优惠<br>优惠通道 <a target="_blank" href="https://www.rainyun.com/nuoyis_">https://www.rainyun.com/nuoyis_</a><br>注册立即领取无门槛5元代金券<br>赞助商2:<a target="_blank" href="https://www.wivps.com/aff/SPRYLBHY" title="推荐卫云计算">稳定低价高速抗打，就上卫云计算</a><br>赞助商3:<a target="_blank" href="https://idc.yeyuing.cn/aff/PBGQAEYZ" title="推荐二蛋云">稳定低价高速抗打，就上二蛋云</a> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4015694772463475" data-ad-slot="8371555862" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script><br>注:本站产品推广只是推广,不负任何跑路责任。文章有侵权和不合法内容，<a target="_blank" rel="noopener" href="https://wj.qq.com/s2/12523658/3494/">请点击这里</a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/9bb5.html" title="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?2718" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧"></a><div class="content"><a class="title" href="/posts/9bb5.html" title="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧">用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧</a><time datetime="2024-07-26T23:05:36.000Z" title="发表于 2024-07-27 07:05:36">2024-07-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/92c1.html" title="RHEL9-Rocky9-Openeuler下载方法"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?1534" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="RHEL9-Rocky9-Openeuler下载方法"></a><div class="content"><a class="title" href="/posts/92c1.html" title="RHEL9-Rocky9-Openeuler下载方法">RHEL9-Rocky9-Openeuler下载方法</a><time datetime="2024-07-07T04:04:00.000Z" title="发表于 2024-07-07 12:04:00">2024-07-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/6465.html" title="Docker用法合集"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?4253" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="Docker用法合集"></a><div class="content"><a class="title" href="/posts/6465.html" title="Docker用法合集">Docker用法合集</a><time datetime="2024-05-23T22:23:00.000Z" title="发表于 2024-05-24 06:23:00">2024-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f52a.html" title="以 RHCL9 做路由器分配教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?5260" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="以 RHCL9 做路由器分配教程"></a><div class="content"><a class="title" href="/posts/f52a.html" title="以 RHCL9 做路由器分配教程">以 RHCL9 做路由器分配教程</a><time datetime="2024-05-10T19:36:00.000Z" title="发表于 2024-05-11 03:36:00">2024-05-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f02.html" title="RHCL 9 合集"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?8671" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="RHCL 9 合集"></a><div class="content"><a class="title" href="/posts/f02.html" title="RHCL 9 合集">RHCL 9 合集</a><time datetime="2024-05-10T01:54:00.000Z" title="发表于 2024-05-10 09:54:00">2024-05-10</time></div></div></div></div><div class="card-widget ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-4015694772463475" data-ad-slot="3926138616"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></div></div></main><footer id="footer" style="background:0 0"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 诺依阁</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" title="又拍云CDN站长联盟扶持" style="cursor:url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;),pointer"><span class="badge-subject">云存储/CDN提供商</span><span class="badge-value bg-color-tianyi">又拍云</span></a> | <a href="http://www.west.cn/" title="虚拟主机-域名注册-主机租用-服务器租用" target="_blank">云服务器</a> | <a href="https://icp.gov.moe/?keyword=20240331" target="_blank">萌ICP备20240331号</a><br><a href="//beian.miit.gov.cn" target="_blank" title="鄂ICP备2023004941号-2" style="cursor:url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;),pointer"><span class="badge-subject">鄂ICP备</span><span class="badge-value bg-color-tianyi">2023004941号-2</span> </a>| <a href="//www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011702000752" target="_blank" title="鄂公网安备42011702000752号" style="cursor:url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;),pointer"><span class="badge-subject">鄂公网安备</span><span class="badge-value bg-color-tianyi">42011702000752号</span></a><br><a target="_blank" rel="noopener" href="https://www.esoot.com">易搜特收录网 </a>| <a target="_blank" rel="noopener" href="https://www.luoca.net/">雒收录</a> | 本站部分CSS由<a target="_blank" rel="noopener" href="https://lolicon.team/">紗夕里</a>提供<br>全站由<a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral" title="又拍云CDN" alt="又拍云CDN"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.nuoyis.net/assets/upyun_logo-CJhLbS30.webp" style="margin-bottom:-10px;margin-left:3px" alt="CDN" width="70" height="35"></a>和<a href="https://www.sctes.com/" target="_blank"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.sctes.com/assets/logo.svg" alt="无畏云" width="55" height="24"></a>提供CDN加速/云存储服务</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/utils.min.js"></script><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/main.min.js"></script><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/tw_cn.min.js"></script><script src="https://lib.baomitu.com/fancyapps-ui/5.0.32/fancybox/fancybox.umd.min.js"></script><script src="https://lib.baomitu.com/vanilla-lazyload/17.8.5/lazyload.iife.min.js"></script><div class="js-pjax"></div><script src="https://server-api.nuoyis.net/live2d/autoload.js"></script><script type="text/javascript" src="https://static.nuoyis.net/private/aboutme/main/js/hua.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span> 数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/search/local-search.min.js"></script></div></div></body></html>

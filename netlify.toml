@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "https://nuoyis-blog.netlify.app/*"
+  to = "https://blog.nuoyis.net/:splat"
+  force = true

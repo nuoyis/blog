@@ -1,0 +1,287 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>腾讯云服务器折腾2 - 切换成openanolis系统 | 诺依阁的日记簿</title><meta name="author" content="诺依阁,wkkjonlykang@vip.qq.com"><meta name="copyright" content="诺依阁"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一开始觉得centos8非常好，不想换成Opencloudos,然后想着我阿里云服务器采用的openanolis,腾讯有个什么opencloudos吧，再加上他们传的centos8停止更新服务了,所以就换成国产的系统了。好家伙，这一换docker直接用不成了，直接熄火,宝塔安装直报错我用systemctl status docker查看了docker运行状态,运行了个寂寞，连安装都没安装果然yu"><meta property="og:type" content="article"><meta property="og:title" content="腾讯云服务器折腾2 - 切换成openanolis系统"><meta property="og:url" content="https://blog.nuoyis.net/posts/a763.html"><meta property="og:site_name" content="诺依阁的日记簿"><meta property="og:description" content="一开始觉得centos8非常好，不想换成Opencloudos,然后想着我阿里云服务器采用的openanolis,腾讯有个什么opencloudos吧，再加上他们传的centos8停止更新服务了,所以就换成国产的系统了。好家伙，这一换docker直接用不成了，直接熄火,宝塔安装直报错我用systemctl status docker查看了docker运行状态,运行了个寂寞，连安装都没安装果然yu"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://server-api.nuoyis.net/acg/?yasuo=1?1533"><meta property="article:published_time" content="2023-01-24T04:10:00.000Z"><meta property="article:modified_time" content="2024-08-25T09:42:24.329Z"><meta property="article:author" content="诺依阁"><meta property="article:tag" content="typecho,php,blog,诺依阁,站长,系统安装,环境搭建,服务器,站长,诺依阁的日常记录,生活,技术,科技,日记,诺依阁的日记簿,博客,云服务器,白嫖,自媒体,树洞空间"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://server-api.nuoyis.net/acg/?yasuo=1?1533"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://blog.nuoyis.net/posts/a763.html"><link rel="preconnect" href="https://lib.baomitu.com"><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/6.5.1/css/all.min.css"><link rel="stylesheet" href="https://lib.baomitu.com/fancyapps-ui/5.0.32/fancybox/fancybox.min.css" media="print" onload='this.media="all"'><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-4015694772463475",enable_page_level_ads:"true"})</script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?2c790c11308ab98338b82482af6a4ff1";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://lib.baomitu.com/egjs-infinitegrid/4.11.0/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"腾讯云服务器折腾2 - 切换成openanolis系统",isPost:!0,isHome:!1,isHighlightShrink:!1,isToc:!1,postUpdate:"2024-08-25 17:42:24"}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="https://static.nuoyis.net/libs/blog/typecho/themes/butterfly/static/css/Hanasaki.css"><meta name="generator" content="Hexo 7.3.0"><style>.github-emoji{position:relative;display:inline-block;width:1.2em;min-height:1.2em;overflow:hidden;vertical-align:top;color:transparent}.github-emoji>span{position:relative;z-index:10}.github-emoji .fancybox,.github-emoji img{margin:0!important;padding:0!important;border:none!important;outline:0!important;text-decoration:none!important;user-select:none!important;cursor:auto!important}.github-emoji img{height:1.2em!important;width:1.2em!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;user-select:none!important;cursor:auto!important}.github-emoji-fallback{color:inherit}.github-emoji-fallback img{opacity:0!important}</style><link rel="alternate" href="/atom.xml" title="诺依阁的日记簿" type="application/atom+xml"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&amp;spec=640&amp;img_type=jpg" onerror='onerror=null,src="/img/friend_404.gif"' alt="avatar"></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">117</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></div><div class="menus_item"><a class="site-page" href="/youlian/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image:url(https://server-api.nuoyis.net/acg/?yasuo=1?1533)"><nav id="nav"><span id="blog-info"><a href="/" title="诺依阁的日记簿"><span class="site-name">诺依阁的日记簿</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></div><div class="menus_item"><a class="site-page" href="/youlian/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">腾讯云服务器折腾2 - 切换成openanolis系统</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-01-24T04:10:00.000Z" title="发表于 2023-01-24 12:10:00">2023-01-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-25T09:42:24.329Z" title="更新于 2024-08-25 17:42:24">2024-08-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/">技术类</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" data-flag-title="腾讯云服务器折腾2 - 切换成openanolis系统"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote><p>一开始觉得centos8非常好，不想换成Opencloudos,然后想着我阿里云服务器采用的openanolis,腾讯有个什么opencloudos吧，再加上他们传的centos8停止更新服务了,所以就换成国产的系统了。<br>好家伙，这一换docker直接用不成了，直接熄火,宝塔安装直报错<br>我用systemctl status docker查看了docker运行状态,<strong>运行了个寂寞，连安装都没安装</strong><br>果然yum install docker-ce 安装docker显示 没有找到包名docker-ce<br>然后我就反馈到宝塔帖子去了(地址:<a target="_blank" rel="noopener" href="https://www.bt.cn/bbs/thread-107128-1-1.html">点击这里</a>)<br>但是我重装后docker不见了又是这种情况，相反我买的阿里云香港轻量云上搭建的openanolis就没问题<br>然后按照宝塔官方给的建议,先配置源。但我想着配置后再用宝塔安装,好家伙一堆未找到包什么什么的,最后还没安装上<br>——-openanolis安装方法——-<br>点击<a target="_blank" rel="noopener" href="https://openanolis.cn/centos-eol#Background">这里</a>进入openanolis停服专区链接地址查看安装步骤和版本<br>首先选腾讯云,腾讯云是我的备案后国内使用的云厂商(阿里云备份好重要数据直接点重装openanolis就行了,无需重新制作)<br>首先也同样备份数据，如果没重要的直接重装成Centos7.6(Centos8被删掉无法重装)<br>官方给出了两种安装方法<br><strong>一.从本地 yum 源安装迁移工具</strong><br><strong>1. 如果待迁移系统无法访问龙蜥mirror或者未连接网络，首先建议在内网搭建一套本地yum源。(<a target="_blank" rel="noopener" href="https://www.yuque.com/anolis-docs/kbase/gkutwr">如何做本地yum源</a> 用户名： rsync_user ， 密码： Rsync@2020) ，然后通过本地源安装迁移工具。假设本地源地址为 <a target="_blank" rel="noopener" href="http://local.repo.com/anolis">http://local.repo.com/anolis</a> ， 则下载迁移工具软件源：</strong><br>wget <a target="_blank" rel="noopener" href="https://mirrors.openanolis.cn/anolis/migration/anolis-migration.repo">https://mirrors.openanolis.cn/anolis/migration/anolis-migration.repo</a> -O /etc/yum.repos.d/anolis-migration.repo</p></blockquote><p><strong>2. 然后执行下述命令将 /etc/yum.repos.d/anolis-migration.repo 里面的baseurl地址替换为本地源地址</strong><br>sed -i "s#baseurl=<a target="_blank" rel="noopener" href="https://mirrors.openanolis.cn/#baseurl=http://local.repo.com/#">https://mirrors.openanolis.cn/#baseurl=http://local.repo.com/#</a>" /etc/yum.repos.d/anolis-migration.repo</p><pre><code>    sed -i &amp;quot;s#gpgkey=https://mirrors.openanolis.cn/#gpgkey=http://local.repo.com/#&amp;quot; /etc/yum.repos.d/anolis-migration.repo
+</code></pre><p><strong>3. 安装迁移工具：</strong><br>yum install -y python-pip</p><pre><code>    yum remove -y python-requests python-urllib3; /usr/bin/pip2 uninstall requests urllib3 -y 2&amp;gt;/dev/null || echo &amp;quot;not installed&amp;quot;
+    
+    yum -y install leapp
+</code></pre><p><em><strong>注：重新安装 python-requests 和 python-urllib3 是为了解决迁移过程中可能发生的软件包升级冲突。</strong></em><br><strong>4. 执行下述命令将 /etc/leapp/files/leapp_upgrade_repositories.repo 里面的baseurl地址替换为本地源地址</strong><br>leapp customrepo –seturl <a href="http://local.repo.com/<version_number">http://local.repo.com/&lt;version_number</a>&gt;</p><p><strong>二.从社区 yum 源（mirrors.openanolis.cn) 安装迁移工具</strong><br><strong>1. 如果待迁移系统可以联网且能访问龙蜥mirror，则下载迁移工具软件源：</strong><br>wget <a target="_blank" rel="noopener" href="https://mirrors.openanolis.cn/anolis/migration/anolis-migration.repo">https://mirrors.openanolis.cn/anolis/migration/anolis-migration.repo</a> -O /etc/yum.repos.d/anolis-migration.repo</p><p><strong>2. 安装迁移工具：</strong><br>yum install -y python-pip</p><pre><code>    yum remove -y python-requests python-urllib3; /usr/bin/pip2 uninstall requests urllib3 -y 2&amp;gt;/dev/null || echo &amp;quot;not installed&amp;quot;
+    
+    yum -y install leapp
+</code></pre><p>再就是系统评估，建议上述操作后使用以下代码将centos源设为.bak文件，以防后续评估出现重复定义现象<br>错误教训:<br>Upgrade has been inhibited due to the following problems:<br>1. Inhibitor: A YUM/DNF repository defined multiple times<br>Consult the pre-upgrade report for details and possible remediation.</p><p>代码:<br>cd /etc/yum.repos.d/</p><pre><code>    ll
+    
+    mkdir bak
+    
+    mv CentOS-*.repo ./bak
+</code></pre><p>操作源站更名bak后输入以下指令<br>chkconfig cloud-init off</p><pre><code>    leapp answer --section remove_pam_pkcs11_module_check.confirm=True
+    
+    sed -i &amp;#039;s/#PermitRootLogin yes/PermitRootLogin yes/&amp;#039; /etc/ssh/sshd_config
+</code></pre><p>开始系统体检，如果出现全绿即可进行下一步<br>leapp preupgrade –no-rhsm</p><p><em><strong>注:上述命令执行成功后，还可以通过/var/log/leapp/leapp-report.txt查看迁移报告，该报告除了包含评估报告外，还包含对目标系统repo的可行性评估，如果目标系统软件包不符合迁移要求，会给出提示。</strong></em><br>出现以下图片即可执行下一步<br>leapp upgrade –no-rhsm // ANCK 内核的龙蜥OS</p><pre><code>    leapp upgrade --no-rhsm --disablerepo=anolis_plus //RHCK 内核的龙蜥OS
+</code></pre><p>至此，你的准备工作已经结束，使用reboot慢慢迁移<br>迁移完成后你还需要进入腾讯的vpc观看是否重启一次，重启后有个cloud-init一直连接不上，但你又没办法,只能等待3分钟超时后进入。根据官网给的文本,你需要将cloud.cfg修改成腾讯云的<br>代码如下:<br>cp /etc/cloud/cloud.cfg /etc/cloud/cloud.cfg.bak //每次操作需备份<br>vim /etc/cloud/cloud.cfg</p><p>cloud.cfg内容<br>users:<br>- default</p><pre><code>    disable_root: 0
+    ssh_pwauth:   1
+    
+    datasource_list: [ ConfigDrive, TencentCloud ]
+    datasource:
+      ConfigDrive:
+        dsmode: local
+      TencentCloud:
+        metadata_urls: [&amp;#039;http://169.254.0.23&amp;#039;, &amp;#039;http://metadata.tencentyun.com&amp;#039;]
+    
+    cloud_init_modules:
+     - migrator
+     - bootcmd
+     - write-files
+     - growpart
+     - resizefs
+     - set_hostname
+     - update_hostname
+     - [&amp;#039;update_etc_hosts&amp;#039;, &amp;#039;once-per-instance&amp;#039;]
+     - rsyslog
+     - users-groups
+     - ssh
+    
+    cloud_config_modules:
+     - mounts
+     - locale
+     - set-passwords
+     - rh_subscription
+     - yum-add-repo
+     - package-update-upgrade-install
+     - ntp
+     - timezone
+     - resolv_conf
+     - puppet
+     - chef
+     - salt-minion
+     - mcollective
+     - disable-ec2-metadata
+     - runcmd
+    
+    unverified_modules: [&amp;#039;resolv_conf&amp;#039;]
+    
+    cloud_final_modules:
+     - rightscale_userdata
+     - scripts-per-once
+     - scripts-per-boot
+     - scripts-per-instance
+     - scripts-user
+     - ssh-authkey-fingerprints
+     - keys-to-console
+     - phone-home
+     - final-message
+     - power-state-change
+    
+    system_info:
+      default_user:
+        name: root
+        lock_passwd: false
+        gecos: Cloud User
+        groups: [wheel, adm, systemd-journal]
+        sudo: [&amp;quot;ALL=(ALL) NOPASSWD:ALL&amp;quot;]
+        shell: /bin/bash
+      distro: rhel
+      paths:
+        cloud_dir: /var/lib/cloud
+        templates_dir: /etc/cloud/templates
+      ssh_svcname: sshd
+    
+    # vim:syntax=yaml
+</code></pre><p>替换完后执行以下代码<br>rm -rf /var/lib/cloud //删除 cloudinit 的缓存记录<br>reboot //重启<br>上述代码执行完后进入vnc看看进入速度是否快了许多<br>至于少了一些东西(例如yum等),可自行询问社区技术人员<br>对于两大云计算运营商没有一个共同的linux系统(不包括其他非国产操作系统),也就算了，但是软件源腾讯还需努力,很多都是空缺的,也是未完善完毕的。前几天我下了镜像,好家伙Opencloud OS才10个G都没到,Openanolis os超过了15个G,加油两大运营商<br>文章到这里就结束了，感谢你的观看</p></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.nuoyis.net">诺依阁</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.nuoyis.net/posts/a763.html">https://blog.nuoyis.net/posts/a763.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.nuoyis.net" target="_blank">诺依阁的日记簿</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://server-api.nuoyis.net/acg/?yasuo=1?1533" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://lib.baomitu.com/butterfly-extsrc/1.1.3/sharejs/dist/css/share.min.css" media="print" onload='this.media="all"'><script src="https://lib.baomitu.com/butterfly-extsrc/1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-4015694772463475" data-ad-slot="3926138616"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/aefe.html" title="Yunzai-Bot(云崽) - Linux Docker保姆级安装教程"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?1492" onerror='onerror=null,src="/img/404.jpg"' alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Yunzai-Bot(云崽) - Linux Docker保姆级安装教程</div></div></a></div><div class="next-post pull-right"><a href="/posts/a14c.html" title="腾讯云服务器折腾1 - Opencloudos切换镜像源"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?6721" onerror='onerror=null,src="/img/404.jpg"' alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">腾讯云服务器折腾1 - Opencloudos切换镜像源</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&amp;spec=640&amp;img_type=jpg" onerror='this.onerror=null,this.src="/img/friend_404.gif"' alt="avatar"></div><div class="author-info__name">诺依阁</div><div class="author-info__description">一个记录技术的日记簿</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">117</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/nuoyis"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">如果有想学习交流的童鞋可以加入我们的群聊聊天哦,群号:607600879<br>日记簿框架已更换为hexo,如果你需要观看新的文章需要浏览器清除缓存</div></div><div class="card-widget nuoyis-ad" id="nuoyis-ad"><div class="item-headline"><i class="fa-solid fa-rectangle-ad"></i><span>广告</span></div><div class="item-content"><a href="https://blog.nuoyis.net">诺依阁推广</a><br>核心赞助:诺依阁的代理卡铺：<a target="_blank" rel="noopener" href="https://haokawx.lot-ml.com/Product/Index/415968">https://haokawx.lot-ml.com/Product/Index/415968</a><br>赞助商1:雨云四周年活动优惠持续发布<br>现在加入雨云最高享受7折优惠<br>优惠通道 <a target="_blank" href="https://www.rainyun.com/nuoyis_">https://www.rainyun.com/nuoyis_</a><br>注册立即领取无门槛5元代金券<br>赞助商2:<a target="_blank" href="https://www.wivps.com/aff/SPRYLBHY" title="推荐卫云计算">稳定低价高速抗打，就上卫云计算</a><br>赞助商3:<a target="_blank" href="https://idc.yeyuing.cn/aff/PBGQAEYZ" title="推荐二蛋云">稳定低价高速抗打，就上二蛋云</a> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4015694772463475" data-ad-slot="8371555862" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script><br>注:本站产品推广只是推广,不负任何跑路责任。文章有侵权和不合法内容，<a target="_blank" rel="noopener" href="https://wj.qq.com/s2/12523658/3494/">请点击这里</a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/9bb5.html" title="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?2718" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧"></a><div class="content"><a class="title" href="/posts/9bb5.html" title="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧">用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧</a><time datetime="2024-07-26T23:05:36.000Z" title="发表于 2024-07-27 07:05:36">2024-07-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/92c1.html" title="RHEL9-Rocky9-Openeuler下载方法"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?1534" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="RHEL9-Rocky9-Openeuler下载方法"></a><div class="content"><a class="title" href="/posts/92c1.html" title="RHEL9-Rocky9-Openeuler下载方法">RHEL9-Rocky9-Openeuler下载方法</a><time datetime="2024-07-07T04:04:00.000Z" title="发表于 2024-07-07 12:04:00">2024-07-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/6465.html" title="Docker用法合集"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?4253" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="Docker用法合集"></a><div class="content"><a class="title" href="/posts/6465.html" title="Docker用法合集">Docker用法合集</a><time datetime="2024-05-23T22:23:00.000Z" title="发表于 2024-05-24 06:23:00">2024-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f52a.html" title="以 RHCL9 做路由器分配教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?5260" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="以 RHCL9 做路由器分配教程"></a><div class="content"><a class="title" href="/posts/f52a.html" title="以 RHCL9 做路由器分配教程">以 RHCL9 做路由器分配教程</a><time datetime="2024-05-10T19:36:00.000Z" title="发表于 2024-05-11 03:36:00">2024-05-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f02.html" title="RHCL 9 合集"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?8671" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="RHCL 9 合集"></a><div class="content"><a class="title" href="/posts/f02.html" title="RHCL 9 合集">RHCL 9 合集</a><time datetime="2024-05-10T01:54:00.000Z" title="发表于 2024-05-10 09:54:00">2024-05-10</time></div></div></div></div><div class="card-widget ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-4015694772463475" data-ad-slot="3926138616"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></div></div></main><footer id="footer" style="background:0 0"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 诺依阁</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" title="又拍云CDN站长联盟扶持" style="cursor:url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;),pointer"><span class="badge-subject">云存储/CDN提供商</span><span class="badge-value bg-color-tianyi">又拍云</span></a> | <a href="http://www.west.cn/" title="虚拟主机-域名注册-主机租用-服务器租用" target="_blank">云服务器</a> | <a href="https://icp.gov.moe/?keyword=20240331" target="_blank">萌ICP备20240331号</a><br><a href="//beian.miit.gov.cn" target="_blank" title="鄂ICP备2023004941号-2" style="cursor:url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;),pointer"><span class="badge-subject">鄂ICP备</span><span class="badge-value bg-color-tianyi">2023004941号-2</span> </a>| <a href="//www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011702000752" target="_blank" title="鄂公网安备42011702000752号" style="cursor:url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;),pointer"><span class="badge-subject">鄂公网安备</span><span class="badge-value bg-color-tianyi">42011702000752号</span></a><br><a target="_blank" rel="noopener" href="https://www.esoot.com">易搜特收录网 </a>| <a target="_blank" rel="noopener" href="https://www.luoca.net/">雒收录</a> | 本站部分CSS由<a target="_blank" rel="noopener" href="https://lolicon.team/">紗夕里</a>提供<br>全站由<a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral" title="又拍云CDN" alt="又拍云CDN"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.nuoyis.net/assets/upyun_logo-CJhLbS30.webp" style="margin-bottom:-10px;margin-left:3px" alt="CDN" width="70" height="35"></a>和<a href="https://www.sctes.com/" target="_blank"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.sctes.com/assets/logo.svg" alt="无畏云" width="55" height="24"></a>提供CDN加速/云存储服务</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/utils.min.js"></script><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/main.min.js"></script><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/tw_cn.min.js"></script><script src="https://lib.baomitu.com/fancyapps-ui/5.0.32/fancybox/fancybox.umd.min.js"></script><script src="https://lib.baomitu.com/vanilla-lazyload/17.8.5/lazyload.iife.min.js"></script><div class="js-pjax"></div><script src="https://server-api.nuoyis.net/live2d/autoload.js"></script><script type="text/javascript" src="https://static.nuoyis.net/private/aboutme/main/js/hua.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span> 数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/search/local-search.min.js"></script></div></div></body></html>

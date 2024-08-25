@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>诺依阁的起始页 | 诺依阁的日记簿</title><meta name="author" content="诺依阁,wkkjonlykang@vip.qq.com"><meta name="copyright" content="诺依阁"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="各位看本篇文章的朋友们,我又回来了虽然今天是高考的百日誓师日，但是有时间还是摸摸鱼的摸鱼摸出了这个目前开发出了百度访问方法,回车搜索,未来搞个ajax无刷加载关键词地址:https:&#x2F;&#x2F;search-start.nuoyis.com"><meta property="og:type" content="article"><meta property="og:title" content="诺依阁的起始页"><meta property="og:url" content="https://blog.nuoyis.net/posts/c3e2.html"><meta property="og:site_name" content="诺依阁的日记簿"><meta property="og:description" content="各位看本篇文章的朋友们,我又回来了虽然今天是高考的百日誓师日，但是有时间还是摸摸鱼的摸鱼摸出了这个目前开发出了百度访问方法,回车搜索,未来搞个ajax无刷加载关键词地址:https:&#x2F;&#x2F;search-start.nuoyis.com"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://server-api.nuoyis.net/acg/?yasuo=1?1621"><meta property="article:published_time" content="2023-02-14T16:45:34.000Z"><meta property="article:modified_time" content="2024-08-25T09:42:24.329Z"><meta property="article:author" content="诺依阁"><meta property="article:tag" content="typecho,php,blog,诺依阁,站长,系统安装,环境搭建,服务器,站长,诺依阁的日常记录,生活,技术,科技,日记,诺依阁的日记簿,博客,云服务器,白嫖,自媒体,树洞空间"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://server-api.nuoyis.net/acg/?yasuo=1?1621"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://blog.nuoyis.net/posts/c3e2.html"><link rel="preconnect" href="https://lib.baomitu.com"><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/6.5.1/css/all.min.css"><link rel="stylesheet" href="https://lib.baomitu.com/fancyapps-ui/5.0.32/fancybox/fancybox.min.css" media="print" onload='this.media="all"'><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-4015694772463475",enable_page_level_ads:"true"})</script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?2c790c11308ab98338b82482af6a4ff1";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://lib.baomitu.com/egjs-infinitegrid/4.11.0/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"诺依阁的起始页",isPost:!0,isHome:!1,isHighlightShrink:!1,isToc:!1,postUpdate:"2024-08-25 17:42:24"}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="https://static.nuoyis.net/libs/blog/typecho/themes/butterfly/static/css/Hanasaki.css"><meta name="generator" content="Hexo 7.3.0"><style>.github-emoji{position:relative;display:inline-block;width:1.2em;min-height:1.2em;overflow:hidden;vertical-align:top;color:transparent}.github-emoji>span{position:relative;z-index:10}.github-emoji .fancybox,.github-emoji img{margin:0!important;padding:0!important;border:none!important;outline:0!important;text-decoration:none!important;user-select:none!important;cursor:auto!important}.github-emoji img{height:1.2em!important;width:1.2em!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;user-select:none!important;cursor:auto!important}.github-emoji-fallback{color:inherit}.github-emoji-fallback img{opacity:0!important}</style><link rel="alternate" href="/atom.xml" title="诺依阁的日记簿" type="application/atom+xml"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&amp;spec=640&amp;img_type=jpg" onerror='onerror=null,src="/img/friend_404.gif"' alt="avatar"></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">117</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></div><div class="menus_item"><a class="site-page" href="/youlian/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image:url(https://server-api.nuoyis.net/acg/?yasuo=1?1621)"><nav id="nav"><span id="blog-info"><a href="/" title="诺依阁的日记簿"><span class="site-name">诺依阁的日记簿</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></div><div class="menus_item"><a class="site-page" href="/youlian/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">诺依阁的起始页</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-02-14T16:45:34.000Z" title="发表于 2023-02-15 00:45:34">2023-02-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-25T09:42:24.329Z" title="更新于 2024-08-25 17:42:24">2024-08-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/uncategorized/">uncategorized</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" data-flag-title="诺依阁的起始页"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote><p>各位看本篇文章的朋友们,我又回来了<br>虽然今天是高考的百日誓师日，但是有时间还是摸摸鱼的<br>摸鱼摸出了这个<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://images.nuoyis.net/blog/typecho/uploads/2023/02/20230216130428212.jpeg" alt=""><br>目前开发出了百度访问方法,回车搜索,未来搞个ajax无刷加载关键词<br>地址:<a target="_blank" rel="noopener" href="https://search-start.nuoyis.com/">https://search-start.nuoyis.com</a></p></blockquote></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.nuoyis.net">诺依阁</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.nuoyis.net/posts/c3e2.html">https://blog.nuoyis.net/posts/c3e2.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.nuoyis.net" target="_blank">诺依阁的日记簿</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://server-api.nuoyis.net/acg/?yasuo=1?1621" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://lib.baomitu.com/butterfly-extsrc/1.1.3/sharejs/dist/css/share.min.css" media="print" onload='this.media="all"'><script src="https://lib.baomitu.com/butterfly-extsrc/1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-4015694772463475" data-ad-slot="3926138616"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/620a.html" title="argon登陆发送评论模块添加 - 为备案检查第二篇"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?361" onerror='onerror=null,src="/img/404.jpg"' alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">argon登陆发送评论模块添加 - 为备案检查第二篇</div></div></a></div><div class="next-post pull-right"><a href="/posts/f81d.html" title="博客平台迁移 - 回归wordpress"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?4686" onerror='onerror=null,src="/img/404.jpg"' alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">博客平台迁移 - 回归wordpress</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&amp;spec=640&amp;img_type=jpg" onerror='this.onerror=null,this.src="/img/friend_404.gif"' alt="avatar"></div><div class="author-info__name">诺依阁</div><div class="author-info__description">一个记录技术的日记簿</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">117</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/nuoyis"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">如果有想学习交流的童鞋可以加入我们的群聊聊天哦,群号:607600879<br>日记簿框架已更换为hexo,如果你需要观看新的文章需要浏览器清除缓存</div></div><div class="card-widget nuoyis-ad" id="nuoyis-ad"><div class="item-headline"><i class="fa-solid fa-rectangle-ad"></i><span>广告</span></div><div class="item-content"><a href="https://blog.nuoyis.net">诺依阁推广</a><br>核心赞助:诺依阁的代理卡铺：<a target="_blank" rel="noopener" href="https://haokawx.lot-ml.com/Product/Index/415968">https://haokawx.lot-ml.com/Product/Index/415968</a><br>赞助商1:雨云四周年活动优惠持续发布<br>现在加入雨云最高享受7折优惠<br>优惠通道 <a target="_blank" href="https://www.rainyun.com/nuoyis_">https://www.rainyun.com/nuoyis_</a><br>注册立即领取无门槛5元代金券<br>赞助商2:<a target="_blank" href="https://www.wivps.com/aff/SPRYLBHY" title="推荐卫云计算">稳定低价高速抗打，就上卫云计算</a><br>赞助商3:<a target="_blank" href="https://idc.yeyuing.cn/aff/PBGQAEYZ" title="推荐二蛋云">稳定低价高速抗打，就上二蛋云</a> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4015694772463475" data-ad-slot="8371555862" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script><br>注:本站产品推广只是推广,不负任何跑路责任。文章有侵权和不合法内容，<a target="_blank" rel="noopener" href="https://wj.qq.com/s2/12523658/3494/">请点击这里</a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/9bb5.html" title="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?2718" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧"></a><div class="content"><a class="title" href="/posts/9bb5.html" title="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧">用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧</a><time datetime="2024-07-26T23:05:36.000Z" title="发表于 2024-07-27 07:05:36">2024-07-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/92c1.html" title="RHEL9-Rocky9-Openeuler下载方法"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?1534" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="RHEL9-Rocky9-Openeuler下载方法"></a><div class="content"><a class="title" href="/posts/92c1.html" title="RHEL9-Rocky9-Openeuler下载方法">RHEL9-Rocky9-Openeuler下载方法</a><time datetime="2024-07-07T04:04:00.000Z" title="发表于 2024-07-07 12:04:00">2024-07-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/6465.html" title="Docker用法合集"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?4253" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="Docker用法合集"></a><div class="content"><a class="title" href="/posts/6465.html" title="Docker用法合集">Docker用法合集</a><time datetime="2024-05-23T22:23:00.000Z" title="发表于 2024-05-24 06:23:00">2024-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f52a.html" title="以 RHCL9 做路由器分配教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?5260" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="以 RHCL9 做路由器分配教程"></a><div class="content"><a class="title" href="/posts/f52a.html" title="以 RHCL9 做路由器分配教程">以 RHCL9 做路由器分配教程</a><time datetime="2024-05-10T19:36:00.000Z" title="发表于 2024-05-11 03:36:00">2024-05-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f02.html" title="RHCL 9 合集"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?8671" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="RHCL 9 合集"></a><div class="content"><a class="title" href="/posts/f02.html" title="RHCL 9 合集">RHCL 9 合集</a><time datetime="2024-05-10T01:54:00.000Z" title="发表于 2024-05-10 09:54:00">2024-05-10</time></div></div></div></div><div class="card-widget ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-4015694772463475" data-ad-slot="3926138616"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></div></div></main><footer id="footer" style="background:0 0"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 诺依阁</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" title="又拍云CDN站长联盟扶持" style="cursor:url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;),pointer"><span class="badge-subject">云存储/CDN提供商</span><span class="badge-value bg-color-tianyi">又拍云</span></a> | <a href="http://www.west.cn/" title="虚拟主机-域名注册-主机租用-服务器租用" target="_blank">云服务器</a> | <a href="https://icp.gov.moe/?keyword=20240331" target="_blank">萌ICP备20240331号</a><br><a href="//beian.miit.gov.cn" target="_blank" title="鄂ICP备2023004941号-2" style="cursor:url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;),pointer"><span class="badge-subject">鄂ICP备</span><span class="badge-value bg-color-tianyi">2023004941号-2</span> </a>| <a href="//www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011702000752" target="_blank" title="鄂公网安备42011702000752号" style="cursor:url(&quot;/usr/plugins/HoerMouse/static/image/dew/link.cur&quot;),pointer"><span class="badge-subject">鄂公网安备</span><span class="badge-value bg-color-tianyi">42011702000752号</span></a><br><a target="_blank" rel="noopener" href="https://www.esoot.com">易搜特收录网 </a>| <a target="_blank" rel="noopener" href="https://www.luoca.net/">雒收录</a> | 本站部分CSS由<a target="_blank" rel="noopener" href="https://lolicon.team/">紗夕里</a>提供<br>全站由<a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral" title="又拍云CDN" alt="又拍云CDN"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.nuoyis.net/assets/upyun_logo-CJhLbS30.webp" style="margin-bottom:-10px;margin-left:3px" alt="CDN" width="70" height="35"></a>和<a href="https://www.sctes.com/" target="_blank"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.sctes.com/assets/logo.svg" alt="无畏云" width="55" height="24"></a>提供CDN加速/云存储服务</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/utils.min.js"></script><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/main.min.js"></script><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/tw_cn.min.js"></script><script src="https://lib.baomitu.com/fancyapps-ui/5.0.32/fancybox/fancybox.umd.min.js"></script><script src="https://lib.baomitu.com/vanilla-lazyload/17.8.5/lazyload.iife.min.js"></script><div class="js-pjax"></div><script src="https://server-api.nuoyis.net/live2d/autoload.js"></script><script type="text/javascript" src="https://static.nuoyis.net/private/aboutme/main/js/hua.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span> 数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="https://lib.baomitu.com/hexo-theme-butterfly/4.12.0/js/search/local-search.min.js"></script></div></div></body></html>
