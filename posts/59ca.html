@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>docker gitlab构建镜像 | 诺依阁的日记簿</title><meta name="author" content="诺依阁,wkkjonlykang@vip.qq.com"><meta name="copyright" content="诺依阁"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="最近在研究流水线，对于我来说，自动构建并上传镜像是非常有必要的，一方面每次都需要执行代码，一方面每次都需要找到版本号，非常的麻烦。在此，我顺便编写文章，记录gitlab快速搭建以及ci&#x2F;cd部署。  配置要求: 4H 8G （可以自己电脑开自启动的虚拟机）  首先安装docker&#x2F;docker-compose，nuoyis提供了快速安装脚本，在安装docker前全是n 1curl -sSO htt"><meta property="og:type" content="article"><meta property="og:title" content="docker gitlab构建镜像"><meta property="og:url" content="https://blog.nuoyis.net/posts/59ca.html"><meta property="og:site_name" content="诺依阁的日记簿"><meta property="og:description" content="最近在研究流水线，对于我来说，自动构建并上传镜像是非常有必要的，一方面每次都需要执行代码，一方面每次都需要找到版本号，非常的麻烦。在此，我顺便编写文章，记录gitlab快速搭建以及ci&#x2F;cd部署。  配置要求: 4H 8G （可以自己电脑开自启动的虚拟机）  首先安装docker&#x2F;docker-compose，nuoyis提供了快速安装脚本，在安装docker前全是n 1curl -sSO htt"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://server-api.nuoyis.net/acg/?yasuo=1?4248"><meta property="article:published_time" content="2025-03-15T03:02:00.000Z"><meta property="article:modified_time" content="2026-08-23T02:11:29.245Z"><meta property="article:author" content="诺依阁"><meta property="article:tag" content="typecho,php,blog,诺依阁,站长,系统安装,环境搭建,服务器,站长,诺依阁的日常记录,生活,技术,科技,日记,诺依阁的日记簿,博客,云服务器,白嫖,自媒体,树洞空间"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://server-api.nuoyis.net/acg/?yasuo=1?4248"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "docker gitlab构建镜像",
+  "url": "https://blog.nuoyis.net/posts/59ca.html",
+  "image": "https://server-api.nuoyis.net/acg/?yasuo=1?4248",
+  "datePublished": "2025-03-15T03:02:00.000Z",
+  "dateModified": "2026-08-23T02:11:29.245Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "诺依阁",
+      "url": "https://blog.nuoyis.net"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://blog.nuoyis.net/posts/59ca.html"><link rel="preconnect"><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css?v=5.7.0"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css?v=7.3.1"><script>(() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2c790c11308ab98338b82482af6a4ff1";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js?v=4.13.0',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"docker gitlab构建镜像",isHighlightShrink:!1,isToc:!1,pageType:"post"}</script><link rel="stylesheet" href="https://static.nuoyis.net/libs/blog/typecho/themes/butterfly/static/css/Hanasaki.css"><meta name="generator" content="Hexo 8.1.2"><style>.github-emoji{position:relative;display:inline-block;width:1.2em;min-height:1.2em;overflow:hidden;vertical-align:top;color:transparent}.github-emoji>span{position:relative;z-index:10}.github-emoji .fancybox,.github-emoji img{margin:0!important;padding:0!important;border:none!important;outline:0!important;text-decoration:none!important;user-select:none!important;cursor:auto!important}.github-emoji img{height:1.2em!important;width:1.2em!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;user-select:none!important;cursor:auto!important}.github-emoji-fallback{color:inherit}.github-emoji-fallback img{opacity:0!important}</style><link rel="alternate" href="/atom.xml" title="诺依阁的日记簿" type="application/atom+xml"></head><body><div class="bg-animation" id="web_bg" style="background:0 0"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&amp;spec=640&amp;img_type=jpg" onerror='this.onerror=null,this.src="/img/friend_404.gif"' alt="avatar"></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">131</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></div><div class="menus_item"><a class="site-page" href="/youlian/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image:url(https://server-api.nuoyis.net/acg/?yasuo=1?4248)"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">诺依阁的日记簿</span></a><a class="nav-page-title" href="/"><span class="site-name">docker gitlab构建镜像</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span> 返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></div><div class="menus_item"><a class="site-page" href="/youlian/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">docker gitlab构建镜像</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-15T03:02:00.000Z" title="发表于 2025-03-15 11:02:00">2025-03-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-08-23T02:11:29.245Z" title="更新于 2026-08-23 10:11:29">2026-08-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/default/">default</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:365,&quot;messagePrev&quot;:&quot;It has been&quot;,&quot;messageNext&quot;:&quot;days since the last update, the content of the article may be outdated.&quot;,&quot;postUpdate&quot;:&quot;2026-08-23 10:11:29&quot;}" hidden></div><p>最近在研究流水线，对于我来说，自动构建并上传镜像是非常有必要的，一方面每次都需要执行代码，一方面每次都需要找到版本号，非常的麻烦。<br>在此，我顺便编写文章，记录gitlab快速搭建以及ci/cd部署。</p><blockquote><p>配置要求: 4H 8G （可以自己电脑开自启动的虚拟机）</p></blockquote><p>首先安装docker/docker-compose，nuoyis提供了快速安装脚本，在安装docker前全是n</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSO https://shell.nuoyis.net/nuoyis-init.sh;bash nuoyis-init.sh</span><br></pre></td></tr></tbody></table></figure><p>然后将下方docker-compose复制进去（注意要修改内容）</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">version: '3'</span><br><span class="line">services:</span><br><span class="line">  gitlab:</span><br><span class="line">    image: gitlab/gitlab-ce:latest</span><br><span class="line">    container_name: gitlab</span><br><span class="line">    restart: always</span><br><span class="line">    privileged: true</span><br><span class="line">    environment:</span><br><span class="line">      GITLAB_OMNIBUS_CONFIG: |</span><br><span class="line">        external_url 'http://你的外网机器IP:2236'</span><br><span class="line">        gitlab_rails['time_zone'] = 'Asia/Shanghai'</span><br><span class="line">        # 禁用 PUMA 集群模式</span><br><span class="line">        puma['worker_processes'] = 0</span><br><span class="line">        puma['min_threads'] = 1</span><br><span class="line">        puma['max_threads'] = 2</span><br><span class="line">        # 关闭监控</span><br><span class="line">        prometheus_monitoring['enable'] = false</span><br><span class="line">        alertmanager['enable'] = false</span><br><span class="line">        node_exporter['enable'] = false</span><br><span class="line">        redis_exporter['enable'] = false</span><br><span class="line">        postgres_exporter['enable'] = false</span><br><span class="line">        pgbouncer_exporter['enable'] = false</span><br><span class="line">        gitlab_exporter['enable'] = false</span><br><span class="line">        sidekiq['metrics_enabled'] = false</span><br><span class="line">      GITLAB_ROOT_PASSWORD: '修改成你的密码'</span><br><span class="line">    ports:</span><br><span class="line">      - "2236:2236"</span><br><span class="line">      - "2238:22"</span><br><span class="line">    volumes:</span><br><span class="line">      - /nuoyis-server/gitlab/config:/etc/gitlab</span><br><span class="line">      - /nuoyis-server/gitlab/logs:/var/log/gitlab</span><br><span class="line">      - /nuoyis-server/gitlab/data:/var/opt/gitlab</span><br><span class="line">    networks:</span><br><span class="line">      nuoyis-net:</span><br><span class="line">        aliases:</span><br><span class="line">          - nuoyis-gitlab</span><br><span class="line">  gitlab-runner:</span><br><span class="line">    image: gitlab/gitlab-runner:latest</span><br><span class="line">    container_name: gitlab-runner</span><br><span class="line">    restart: always</span><br><span class="line">    privileged: true</span><br><span class="line">    volumes:</span><br><span class="line">      - /nuoyis-server/gitlab/runner:/etc/gitlab-runner</span><br><span class="line">      - /var/run/docker.sock:/var/run/docker.sock</span><br><span class="line">    networks:</span><br><span class="line">      nuoyis-net:</span><br><span class="line">        aliases:</span><br><span class="line">          - nuoyis-gitlab-runner</span><br><span class="line">networks:</span><br><span class="line">  nuoyis-net:</span><br><span class="line">    name: nuoyis-net</span><br><span class="line">    driver: bridge</span><br><span class="line">    ipam:</span><br><span class="line">      driver: default</span><br><span class="line">      config:</span><br><span class="line">        - subnet: 192.168.223.0/24</span><br><span class="line">          gateway: 192.168.223.1</span><br></pre></td></tr></tbody></table></figure><p>首先docker-compose启动，然后再去编写gitlab-runner</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose -f gitlab.yaml up -d</span><br></pre></td></tr></tbody></table></figure><p>gitlab-runner 启动文件编写<br>首先获取token(修改链接快速访问),访问后在右边三个点内</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://IP:2236/admin/runners</span><br></pre></td></tr></tbody></table></figure><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://images.nuoyis.net/typecho/uploads/2025/03/4113170668.png" alt="{D7A859D3-157D-4245-B77F-49C726323FE6}.png"></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">cat &gt; /nuoyis-server/gitlab/runner/config.toml &lt;&lt; EOF</span><br><span class="line">concurrent = 1</span><br><span class="line">check_interval = 0</span><br><span class="line">shutdown_timeout = 0</span><br><span class="line"></span><br><span class="line">[session_server]</span><br><span class="line">  session_timeout = 1800</span><br><span class="line"></span><br><span class="line">[[runners]]</span><br><span class="line">  name = "nuoyis-runner"</span><br><span class="line">  url = "http://192.168.223.1:2236/"</span><br><span class="line">  id = 1</span><br><span class="line">  token = "gitlab生成的token"</span><br><span class="line">  token_obtained_at = 2025-03-13T19:16:59Z</span><br><span class="line">  token_expires_at = 0001-01-01T00:00:00Z</span><br><span class="line">  executor = "docker"</span><br><span class="line">  [runners.cache]</span><br><span class="line">    MaxUploadedArchiveSize = 0</span><br><span class="line">    [runners.cache.s3]</span><br><span class="line">    [runners.cache.gcs]</span><br><span class="line">    [runners.cache.azure]</span><br><span class="line">  [runners.docker]</span><br><span class="line">    tls_verify = false</span><br><span class="line">    image = "docker:20.10.8"</span><br><span class="line">    privileged = true</span><br><span class="line">    disable_entrypoint_overwrite = false</span><br><span class="line">    oom_kill_disable = false</span><br><span class="line">    disable_cache = false</span><br><span class="line">    volumes = ["/var/run/docker.sock:/var/run/docker.sock","/cache"]</span><br><span class="line">    shm_size = 0</span><br><span class="line">    network_mtu = 0</span><br><span class="line">EOF</span><br></pre></td></tr></tbody></table></figure><p>在物理机上使用git上传项目</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">mkdir nuoyis-lnmp-np</span><br><span class="line"># 把东西复制一个目录里或者提前有目录</span><br><span class="line"># 有目录写法</span><br><span class="line"># rm -rf .git</span><br><span class="line"># 创建目录写法</span><br><span class="line"># mv ./* </span><br><span class="line"># cd nuoyis-lnmp-np</span><br><span class="line">git init</span><br><span class="line">git config --global user.name "nuoyis"</span><br><span class="line">git config --global user.email "nuoyis@nuoyis.net"</span><br><span class="line"># main分支可以切换别的分支</span><br><span class="line">git checkout -b main</span><br><span class="line">git add .</span><br><span class="line">git commit -m "初次上传"</span><br><span class="line">git remote add origin http://IP地址:2236/nuoyis(用户名)/nuoyis-lnmp-np(库名).git</span><br><span class="line">git pull origin main</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></tbody></table></figure><p>gitlab docker构建 .gitlab.yml 编写示范<br>首先在库的根目录创建build.json</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  "name": "nuoyis-lnmp-np",</span><br><span class="line">  "version": "0.1.3"</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p>然后获取token并填入(修改后访问快速到达)</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://IP:2236/用户/库名/-/settings/access_tokens</span><br><span class="line">http://IP:2236/用户/库名/-/settings/ci_cd#js-cicd-variables-settings</span><br></pre></td></tr></tbody></table></figure><p>再在根目录下创建.gitlab.yml</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">stages:</span><br><span class="line">  - build</span><br><span class="line">  - deploy</span><br><span class="line"></span><br><span class="line">nuoyis_image_tag:</span><br><span class="line">  image: ubuntu:20.04</span><br><span class="line">  stage: build</span><br><span class="line">  except:</span><br><span class="line">    - build.json</span><br><span class="line">    - README.md</span><br><span class="line">  script:</span><br><span class="line">    - echo "Changing to domestic mirrors for faster package installation"</span><br><span class="line">    - cp /etc/apt/sources.list /etc/apt/sources.list.bak  # 备份原始源列表</span><br><span class="line">    - sed -i 's/http:\/\/archive.ubuntu.com/https:\/\/mirrors.aliyun.com/g' /etc/apt/sources.list  # 更换为阿里云镜像源</span><br><span class="line">    - sed -i 's/http:\/\/security.ubuntu.com/https:\/\/mirrors.aliyun.com/g' /etc/apt/sources.list  # 更换为阿里云镜像源</span><br><span class="line">    - apt-get -o Acquire::https::Verify-Peer=false -o Acquire::https::Verify-Host=false update -y &amp;&amp; apt-get -o Acquire::https::Verify-Peer=false -o Acquire::https::Verify-Host=false upgrade -y &amp;&amp; apt-get -o Acquire::https::Verify-Peer=false -o Acquire::https::Verify-Host=false install -y ca-certificates  # 更新源列表</span><br><span class="line">    - apt-get install -y git curl build-essential jq  # 安装常用工具，如 git, curl 等</span><br><span class="line">    - current_version=$(jq -r '.version' build.json)</span><br><span class="line">    - IFS='.' read -ra version_parts &lt;&lt;&lt; "$current_version"</span><br><span class="line">    - ((version_parts[2]++))</span><br><span class="line">    - new_version="${version_parts[0]}.${version_parts[1]}.${version_parts[2]}"</span><br><span class="line">    - jq ".version = \"$new_version\"" build.json &gt; temp.json</span><br><span class="line">    - mv temp.json build.json</span><br><span class="line">    - git config user.name "nuoyis"</span><br><span class="line">    - git config user.email "nuoyis@nuoyis.net"</span><br><span class="line">    - git remote rm origin</span><br><span class="line">    - git remote add origin http://oauth2:$GitLab_Access_Tokens@你的IP:2236/nuoyis/nuoyis-lnmp-np.git</span><br><span class="line">    - git add build.json</span><br><span class="line">    - git commit -m "use to $new_version"</span><br><span class="line">    - git push origin HEAD:main -o ci.skip</span><br><span class="line">    - echo "VERSION=$new_version" &gt; nuoyis.env</span><br><span class="line">  artifacts:</span><br><span class="line">    paths:</span><br><span class="line">      - nuoyis.env</span><br><span class="line">  only: </span><br><span class="line">    - main</span><br><span class="line"></span><br><span class="line">nuoyis_image_build:</span><br><span class="line">  image: docker:20.10.8</span><br><span class="line">  timeout: 10 hours</span><br><span class="line">  stage: deploy</span><br><span class="line">  dependencies:</span><br><span class="line">    - nuoyis_image_tag</span><br><span class="line">  services:</span><br><span class="line">    - name: docker:20.10.8-dind</span><br><span class="line">      alias: docker</span><br><span class="line">      command: ["--insecure-registry=0.0.0.0/0"]</span><br><span class="line">  variables:</span><br><span class="line">    DOCKER_DRIVER: overlay2  # 使用 overlay2 存储驱动</span><br><span class="line">  script:</span><br><span class="line">    - export $(cat nuoyis.env | xargs)</span><br><span class="line">    - echo $VERSION</span><br><span class="line">    - echo "Building Docker image..."</span><br><span class="line">    - docker build --no-cache -t "nuoyis-lnmp-np:$VERSION" -f ./dockerfile/dockerfile .</span><br><span class="line">    - docker tag "nuoyis-lnmp-np:$VERSION" "registry.cn-hangzhou.aliyuncs.com/nuoyis/nuoyis-lnmp:$VERSION"</span><br><span class="line">    - docker tag "nuoyis-lnmp-np:$VERSION" "registry.cn-hangzhou.aliyuncs.com/nuoyis/nuoyis-lnmp:latest"</span><br><span class="line">    - 'docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD registry.cn-hangzhou.aliyuncs.com'</span><br><span class="line">    - docker push registry.cn-hangzhou.aliyuncs.com/nuoyis/nuoyis-lnmp:latest</span><br><span class="line">    - docker push registry.cn-hangzhou.aliyuncs.com/nuoyis/nuoyis-lnmp:$VERSION</span><br><span class="line">  only:</span><br><span class="line">    - main</span><br></pre></td></tr></tbody></table></figure><p>流水线执行检测<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://images.nuoyis.net/typecho/uploads/2025/03/3433135480.png" alt="2025-03-15T11:11:47.png"><br>流水线发布<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://images.nuoyis.net/typecho/uploads/2025/03/2534473258.png" alt="2025-03-15T11:09:58.png"></p></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.nuoyis.net">诺依阁</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.nuoyis.net/posts/59ca.html">https://blog.nuoyis.net/posts/59ca.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://blog.nuoyis.net" target="_blank">诺依阁的日记簿</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="https://server-api.nuoyis.net/acg/?yasuo=1?4248" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="/pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css?v=1.1.6" media="print" onload='this.media="all"'><script src="/pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js?v=1.1.6" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/2c56.html" title="nuoyis's lnmp 使用指南"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?7168" onerror='onerror=null,src="/img/404.jpg"' alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">nuoyis's lnmp 使用指南</div></div><div class="info-2"><div class="info-item-1">前言nuoyis’s lnmp 作为从原nuoyis’s lnmp-np和mariadb配合使用的容器转变为全编译构建融合的容器，并在此做出了巨大优化和独特的服务方面。此项目为开源项目，但没有上传配置文件，故在文章补足或后续添加。 开源地址: https://github.com/nuoyis/lnmp 改进方案如下： 构建时由原来shell脚本决定版本号融合到容器中变为整体，可以交付各个构建平台只需读取dockerfile 从lnmp-np开始，就已经将php引用转变为仅需include 即可切换最新版和兼容版。 从lnmp 0.0.2版本开始，逐步优化编写conf文件困难，不但每次启动自动写入nginx.conf.full.template 和nginx.conf.succinct.template, 头部需要ssl配置的均有内置include方案，仅需如下面编写 123456789101112131415161718192021222324252627282930313233343536server { # 引入头部文件(必须配置ssl，否则使用full版本)...</div></div></div></a><a class="pagination-related" href="/posts/4847.html" title="关于电脑五大件能换大厂就换大厂的建议"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?2337" onerror='onerror=null,src="/img/404.jpg"' alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">关于电脑五大件能换大厂就换大厂的建议</div></div><div class="info-2"><div class="info-item-1">电脑五大件，CPU 内存条 硬盘 电源 显卡(集显可以忽略)都是整个计算机中最重要的部件，任何一个部件损坏都会影响设备的稳定运行。关于写这篇文章，一是劝退一些想要低价购买一些不知名的厂商，虽然一些厂商可能说某某能用，但是对于一线品牌来说，是及其缺少调教优化的。 首先声明，配件均是2024年8月购买，距离写文章质保仅过去6-7个月，也就是2024年夏天配的电脑 1是玄武650SFX我当时买来是想支持下本土产业，同时想知道本土产的东西做的质量怎么样。我的电脑基本上不关机,那天关机是因为买的intel ac9260网卡蓝牙有问题(不稳定)，之前都是断电后长按电源键60秒才恢复驱动(我更觉得是硬件损坏)。但是当那天做完操作后，插上电源按下开关，电源瞬间冒出火花，伴随着烧糊的味道。于是我立马拔掉电源。不过客服服务是挺好的，如果你要购买可以考虑未来可期。截图2是精粤B650M gaming plus,这个主板当时吹的还挺好，但是实际上装机的时候蓝屏次数和莫名奇妙重启次数就很多，直到我买了第二根内存条问题更加严重了，内存测试都不通过(6000频率)（不要说我内存条有问题，我华硕测试一天一个...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&amp;spec=640&amp;img_type=jpg" onerror='this.onerror=null,this.src="/img/friend_404.gif"' alt="avatar"></div><div class="author-info-name">诺依阁</div><div class="author-info-description">一个记录技术的日记簿</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">131</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/nuoyis"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">日记簿框架已更换为hexo,如果你需要观看新的文章可能需要浏览器清除缓存</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/5462.html" title="vmware最新版下载方法"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?7690" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="vmware最新版下载方法"></a><div class="content"><a class="title" href="/posts/5462.html" title="vmware最新版下载方法">vmware最新版下载方法</a><time datetime="2026-05-19T06:08:46.000Z" title="发表于 2026-05-19 14:08:46">2026-05-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/93b5.html" title="openclaw命令行与搭建(2026.5.3版本)"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?1177" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="openclaw命令行与搭建(2026.5.3版本)"></a><div class="content"><a class="title" href="/posts/93b5.html" title="openclaw命令行与搭建(2026.5.3版本)">openclaw命令行与搭建(2026.5.3版本)</a><time datetime="2026-04-29T10:17:03.000Z" title="发表于 2026-04-29 18:17:03">2026-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/8a64.html" title="Obsidian + Hexo + GitHub Actions：写完博客，推送即发布"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?7815" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="Obsidian + Hexo + GitHub Actions：写完博客，推送即发布"></a><div class="content"><a class="title" href="/posts/8a64.html" title="Obsidian + Hexo + GitHub Actions：写完博客，推送即发布">Obsidian + Hexo + GitHub Actions：写完博客，推送即发布</a><time datetime="2026-04-28T03:58:38.000Z" title="发表于 2026-04-28 11:58:38">2026-04-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2c56.html" title="nuoyis's lnmp 使用指南"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?7168" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="nuoyis's lnmp 使用指南"></a><div class="content"><a class="title" href="/posts/2c56.html" title="nuoyis's lnmp 使用指南">nuoyis's lnmp 使用指南</a><time datetime="2025-08-21T13:12:00.000Z" title="发表于 2025-08-21 21:12:00">2025-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/59ca.html" title="docker gitlab构建镜像"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?4248" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="docker gitlab构建镜像"></a><div class="content"><a class="title" href="/posts/59ca.html" title="docker gitlab构建镜像">docker gitlab构建镜像</a><time datetime="2025-03-15T03:02:00.000Z" title="发表于 2025-03-15 11:02:00">2025-03-15</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2019 - 2026 By 诺依阁</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div><div class="footer_custom_text">本站部分CSS由<a target="_blank" rel="noopener" href="https://lolicon.team/">紗夕里</a>提供 | <a href="http://www.west.cn/" title="虚拟主机-域名注册-主机租用-服务器租用" target="_blank">云服务器</a><br><a href="//beian.miit.gov.cn" target="_blank" title="鄂ICP备2023004941号-2"><span class="badge-subject">鄂ICP备</span><span class="badge-value bg-color-tianyi">2023004941号-2</span></a> | <a href="//www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011702000752" target="_blank" title="鄂公网安备42011702000752号"><span class="badge-subject">鄂公网安备</span><span class="badge-value bg-color-tianyi">42011702000752号</span></a><br>本站由<a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" title="又拍云CDN" alt="又拍云CDN"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://static.nuoyis.net/libs/upyun/%E5%8F%88%E6%8B%8D%E4%BA%91_logo5.png" style="margin-bottom:-12.1px;margin-left:3px;margin-right:3px" alt="CDN" width="70" height="35"></a>提供CDN加速/云存储服务</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><script src="/js/tw_cn.js?v=5.7.0"></script><script src="/pluginsSrc/instant.page/instantpage.js?v=5.2.0" type="module"></script><script src="/pluginsSrc/vanilla-lazyload/dist/lazyload.iife.min.js?v=19.1.3"></script><div class="js-pjax"></div><script src="https://server-api.nuoyis.net/live2d/autoload.js"></script><script type="text/javascript" src="https://static.nuoyis.net/private/aboutme/main/js/hua.js"></script><script src="/pluginsSrc/pjax/pjax.min.js?v=0.2.8" defer></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"]):not([data-fancybox])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      if (!item.parentNode) return
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || ''
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    const responseURL = e.request && e.request.responseURL
+    if (e.request && e.request.status === 404) {
+      true
+        ? pjax.loadUrl('/404.html')
+        : responseURL && (window.location.href = responseURL)
+    } else if (responseURL) {
+      window.location.href = responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span> 数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"></div><hr><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.7.0"></script></div></div></body></html>

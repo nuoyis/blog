@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>诺依阁的日记簿 - 一个记录技术的日记簿</title><meta name="author" content="诺依阁,wkkjonlykang@vip.qq.com"><meta name="copyright" content="诺依阁"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一个记录技术的日记簿"><meta property="og:type" content="website"><meta property="og:title" content="诺依阁的日记簿"><meta property="og:url" content="https://blog.nuoyis.net/page/2/index.html"><meta property="og:site_name" content="诺依阁的日记簿"><meta property="og:description" content="一个记录技术的日记簿"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&spec=640&img_type=jpg"><meta property="article:author" content="诺依阁"><meta property="article:tag" content="typecho,php,blog,诺依阁,站长,系统安装,环境搭建,服务器,站长,诺依阁的日常记录,生活,技术,科技,日记,诺依阁的日记簿,博客,云服务器,白嫖,自媒体,树洞空间"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&spec=640&img_type=jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://blog.nuoyis.net/page/2/index.html"><link rel="preconnect"><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css?v=5.7.0"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css?v=7.3.1"><script>(() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2c790c11308ab98338b82482af6a4ff1";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js?v=4.13.0',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"诺依阁的日记簿",isHighlightShrink:!1,isToc:!1,pageType:"home"}</script><link rel="stylesheet" href="https://static.nuoyis.net/libs/blog/typecho/themes/butterfly/static/css/Hanasaki.css"><meta name="generator" content="Hexo 8.1.2"><style>.github-emoji{position:relative;display:inline-block;width:1.2em;min-height:1.2em;overflow:hidden;vertical-align:top;color:transparent}.github-emoji>span{position:relative;z-index:10}.github-emoji .fancybox,.github-emoji img{margin:0!important;padding:0!important;border:none!important;outline:0!important;text-decoration:none!important;user-select:none!important;cursor:auto!important}.github-emoji img{height:1.2em!important;width:1.2em!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;user-select:none!important;cursor:auto!important}.github-emoji-fallback{color:inherit}.github-emoji-fallback img{opacity:0!important}</style><link rel="alternate" href="/atom.xml" title="诺依阁的日记簿" type="application/atom+xml"></head><body><div class="bg-animation" id="web_bg" style="background:0 0"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&amp;spec=640&amp;img_type=jpg" onerror='this.onerror=null,this.src="/img/friend_404.gif"' alt="avatar"></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">131</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></div><div class="menus_item"><a class="site-page" href="/youlian/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background:0 0"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">诺依阁的日记簿</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></div><div class="menus_item"><a class="site-page" href="/youlian/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">诺依阁的日记簿</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/619c.html" title="双主数据库搭建"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?3639" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="双主数据库搭建"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/619c.html" title="双主数据库搭建">双主数据库搭建</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-01-14T19:07:24.000Z" title="发表于 2025-01-15 03:07:24">2025-01-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/default/">default</a></span></div><div class="content">首先先准备好两个相同的数据库docke-compose写法 12345678910111213141516version: '2.2.2'services: nuoyis-lnmp-mariadb: container_name: nuoyis-lnmp-mariadb image: mariadb:11.6.2 environment: TIME_ZONE: Asia/Shanghai MYSQL_ROOT_PASSWORD: "123456" volumes: - /nuoyis-web/mariadb/init/init.sql:/docker-entrypoint-initdb.d/init.sql - /nuoyis-web/mariadb/server:/var/lib/mysql - /nuoyis-web/mariadb/import:/nuoyis-web/mariadb/import - /nuoyis-web/mariadb/config/my.cnf:/etc/mysql...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/5a8b.html" title="新安装windows11 24h2 vmware和自带vmx冲突解决方案"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?5302" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="新安装windows11 24h2 vmware和自带vmx冲突解决方案"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/5a8b.html" title="新安装windows11 24h2 vmware和自带vmx冲突解决方案">新安装windows11 24h2 vmware和自带vmx冲突解决方案</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-02T23:33:34.000Z" title="发表于 2024-12-03 07:33:34">2024-12-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/default/">default</a></span></div><div class="content">之前没有截图，找了很久的问题，但是我查找的结果都是windows11 底层虚拟化的未完全关闭的原因。博主这里讲的挺好的，链接:https://blog.csdn.net/weixin_70163775/article/details/143041747不过我觉得装个win10 22h2，再升级到win11 24h2就不用手动关闭那么多功能</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/2efe.html" title="第二次与腾讯云开发者社区合作同步通知"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?8456" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="第二次与腾讯云开发者社区合作同步通知"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/2efe.html" title="第二次与腾讯云开发者社区合作同步通知">第二次与腾讯云开发者社区合作同步通知</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-11-19T00:59:56.000Z" title="发表于 2024-11-19 08:59:56">2024-11-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/default/">default</a></span></div><div class="content">我的博客即将同步至腾讯云开发者社区，邀请大家一同入驻：https://cloud.tencent.com/developer/support-plan?invite_code=38pzuvhs3ewww</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/9990.html" title="Ubuntu 22.05编译OpenWrt 23.05实战"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?5484" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="Ubuntu 22.05编译OpenWrt 23.05实战"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/9990.html" title="Ubuntu 22.05编译OpenWrt 23.05实战">Ubuntu 22.05编译OpenWrt 23.05实战</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-22T02:51:00.000Z" title="发表于 2024-09-22 10:51:00">2024-09-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/default/">default</a></span></div><div class="content">哔哩哔哩视频教程:https://www.bilibili.com/video/BV1rnsCe1ErV博主基本插件版本推荐编译配置:16核心 20G内存 150G硬盘用于存储数据包以及编译包等 前情提要1.需要准备能访问到外网域名的加速器(自己斟酌) 2.准备一个安装好的ubuntu虚拟机(或者直接使用海外服务器) 3.如果是国内，请在有加速器情况下给/etc/bash.bashrc内添加三行加速器给的端口地址 123export http_proxy=http://192.168.100.1:7890export https_proxy=http://192.168.100.1:7890export ALL_PROXY=http://192.168.100.1:7890 4.首次ubuntu安装时候，可能是普通用户，这时你需要修改root密码后登录,为后面单独创建用户做准备 12sudo passwd rootsu - root 没有加速器可能要麻烦点（执行国内拉取方式以及执行下方代码) 12345crontab -e写入//内的内容(全程root）// */10 *...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/eed5.html" title="RHEL9(红帽9)关于使用rocky源导致openssl-lib和openssl-fips-provider冲突的问题解决方案"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?5678" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="RHEL9(红帽9)关于使用rocky源导致openssl-lib和openssl-fips-provider冲突的问题解决方案"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/eed5.html" title="RHEL9(红帽9)关于使用rocky源导致openssl-lib和openssl-fips-provider冲突的问题解决方案">RHEL9(红帽9)关于使用rocky源导致openssl-lib和openssl-fips-provider冲突的问题解决方案</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-02T03:34:00.000Z" title="发表于 2024-09-02 11:34:00">2024-09-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/default/">default</a></span></div><div class="content">在一次写脚本的时候，突然发现rhel9.4采用rocky9.4源后，openssl安装的东西经常性的报错。一开始到处去查也没有先例和解释。然后到了rocky论坛的一个帖子( https://forums.rockylinux.org/t/issue-with-openssl-fips-provider-during-migration-from-rhel-9/15290/4 )里面找到了问题。核心问题是 openssl-fips-provider 和 openssl-libs 都提供了 /usr/lib64/ossl-modules/fips.so，至少在 openssl-libs-1：3.0.7-27 之前，Rocky 拥有/拥有一个软件包 openssl-libs，而 RHEL 构建 openssl-libs 和 openssl-fips-provider，将一些内容拆分为后者后来，我结合了一些学过的命令，将冲突地方强制删除，换上 123rpm -e --nodeps openssl-fips-provideryum install https://shell.nuoyis....</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/2a85.html" title="小软件 - 快速把从Typecho转Hexo,或Hexo转Typecho"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?3430" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="小软件 - 快速把从Typecho转Hexo,或Hexo转Typecho"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/2a85.html" title="小软件 - 快速把从Typecho转Hexo,或Hexo转Typecho">小软件 - 快速把从Typecho转Hexo,或Hexo转Typecho</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-28T00:14:00.000Z" title="发表于 2024-08-28 08:14:00">2024-08-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/default/">default</a></span></div><div class="content">软件下载链接:https://gitee.com/nuoyis/Typecho-and-Hexo/releases/tag/release 我去看了下浏览器上的软件和一堆源码的软件，有的可能年久失修，有的因为没有打包可能会出现报错，反正就是没有类似wordpress转typecho(插件)，下载后点击几下就能用的那种。于是结合Typecho 1.2.1和Hexo方面做了平台迁移-&gt;控制台式交互式设计。打包后有个好处:无需额外环境，即开即用，再就是python版本再变化，只要数据库还是那个数据库，Hexo文章还是那个md文件，软件就不会失效。缺点:博主不愿免费分享代码，但是属于闭源免费软件，公开给大家使用。对于软件没有任何后门(建议使用时候开启数据库端口,迁移完毕关闭数据库端口)，只支持windows exe格式，后续可能出64位linux版本软件截图:下载链接:</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/9bb5.html" title="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?5622" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/9bb5.html" title="用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧">用红帽&amp;amp;红帽衍生发行版 9来优化你的站点吧</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-07-26T15:05:36.000Z" title="发表于 2024-07-26 23:05:36">2024-07-26</time></span></div><div class="content">最近，使用了红帽9.4和Rocky9.4 外带升级最新内核，再加上小许调优措施，访问速度已经达到了之前centos 8 2核4G的速度了。主要是最小化的红帽9，启动速度比7和8更加快速，只要你会手动配源就能体验到秒速启动的快感。然后就是Centos Stream属于滚动发行版，所以红帽9可以尝试使用Rocky的源。为了让最小化安装和server差异缩小，我还特意写了个init脚本脚本开源地址: https://gitee.com/nuoyis/shell执行命令: 1wget -O nuoyis-init.sh https://gitee.com/nuoyis/shell/raw/main/nuoyis-init.sh;bash nuoyis-init.sh 目前实现了rhel系列Linux自动配置Rocky镜像源 epel镜像源 remi源 并更新到最新内核(相信我，越更新速度越快)埋坑功能: lnmp安装 / 编译安装，bbr加速，linux内核调优以及唤醒命令，探针部署以及分布式自动化实际效果截图 由诺依阁提供Hexo转Typecho软件支持</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/92c1.html" title="RHEL9-Rocky9-Openeuler下载方法"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?6796" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="RHEL9-Rocky9-Openeuler下载方法"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/92c1.html" title="RHEL9-Rocky9-Openeuler下载方法">RHEL9-Rocky9-Openeuler下载方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-07-06T20:04:00.000Z" title="发表于 2024-07-07 04:04:00">2024-07-07</time></span></div><div class="content">Red Hat Enterprise Linux官方下载的话，首先得进入官网，选择右上角support,再点击downloads，然后点击Red Hat Enterprise Linux,再去选择9.x版本快捷进入(需要注册):https://access.redhat.com/downloads/content/rhelRHEL9下载地址:https://www.123pan.com/s/NsSRVv-DZDn3.htmlhttps://cloud.189.cn/t/EFr2Er2uYZR3 （访问码：q3xn)https://alist.nuoyis.net/%E8%A3%85%E6%9C%BA%E9%95%9C%E5%83%8F+%E5%B7%A5%E5%85%B7%E7%AE%B1/%E9%95%9C%E5%83%8F/Linux%E7%B3%BB%E5%88%97/rhel-9.4-x86_64-dvd.iso(可能无法下载) Rocky 和 Openeuler 建议使用镜像站下载，这里使用校园网联合镜像站进行下载（ https://mirrors.cernet.edu...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/6465.html" title="Docker用法合集"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?5236" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="Docker用法合集"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/6465.html" title="Docker用法合集">Docker用法合集</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-23T14:23:00.000Z" title="发表于 2024-05-23 22:23:00">2024-05-23</time></span></div><div class="content">docker命令大全 12345678910docker build -t 镜像 .docker run -d -p 端口:映射端口 --name 名称 --restart always 镜像名 参数:-d 后台运行-e 变量-t 分配虚拟终端-docker start 容器docker kill 容器docker exec -it 容器 命令 docker常用配置文件首先vim /etc/docker/daemon.json然后 123456789101112{ "registry-mirrors": [ "https://mirror.ccs.tencentyun.com" ], "bip": "192.168.100.1/24", "default-address-pools": [ { "base": "192.168.100.0/16", "size": 24 } ]} registry-mirrors指的是镜像加速，bip指的是docker容器网段区域，default-address-pools指的是默认分配网段区域 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/f52a.html" title="以 RHCL9 做路由器分配教程"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?876" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="以 RHCL9 做路由器分配教程"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/f52a.html" title="以 RHCL9 做路由器分配教程">以 RHCL9 做路由器分配教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-10T11:36:00.000Z" title="发表于 2024-05-10 19:36:00">2024-05-10</time></span></div><div class="content">前言装配前置1.静态IP2.YUM源请看文章文章RHCL 9 合集根据上一篇文章来配置双网卡注意:ens160采取桥接模式,要求绑定在物理网卡上,不然无法启动网卡ens224采取主机模式,要求仅主机模式 环境安装需要安装dns,dhcp,iptablesdns,dhcp配置请看文章RHCL 9 合集iptables安装以及开启启动(如果没有配置好外网卡可以采取本地源) 123yum -y install iptables-servicessystemctl start iptablessystemctl enable iptables 开启内核转发 12echo "net.ipv4.ip_forward = 1" &gt;&gt; /etc/sysctl.confsysctl -p 路由转发 1route add -net 192.168.50.0/24 dev ens160 如果提前将dhcp和dns配置好后,dhcp改配置如下: 123456789subnet 192.168.50.0 netmask 255.255.255.0 { range 192.168.50.4 1...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#content-inner">14</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q.qlogo.cn/headimg_dl?dst_uin=914205978&amp;spec=640&amp;img_type=jpg" onerror='this.onerror=null,this.src="/img/friend_404.gif"' alt="avatar"></div><div class="author-info-name">诺依阁</div><div class="author-info-description">一个记录技术的日记簿</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">131</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/nuoyis"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">日记簿框架已更换为hexo,如果你需要观看新的文章可能需要浏览器清除缓存</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/5462.html" title="vmware最新版下载方法"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?7690" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="vmware最新版下载方法"></a><div class="content"><a class="title" href="/posts/5462.html" title="vmware最新版下载方法">vmware最新版下载方法</a><time datetime="2026-05-19T06:08:46.000Z" title="发表于 2026-05-19 14:08:46">2026-05-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/93b5.html" title="openclaw命令行与搭建(2026.5.3版本)"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?1177" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="openclaw命令行与搭建(2026.5.3版本)"></a><div class="content"><a class="title" href="/posts/93b5.html" title="openclaw命令行与搭建(2026.5.3版本)">openclaw命令行与搭建(2026.5.3版本)</a><time datetime="2026-04-29T10:17:03.000Z" title="发表于 2026-04-29 18:17:03">2026-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/8a64.html" title="Obsidian + Hexo + GitHub Actions：写完博客，推送即发布"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?7815" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="Obsidian + Hexo + GitHub Actions：写完博客，推送即发布"></a><div class="content"><a class="title" href="/posts/8a64.html" title="Obsidian + Hexo + GitHub Actions：写完博客，推送即发布">Obsidian + Hexo + GitHub Actions：写完博客，推送即发布</a><time datetime="2026-04-28T03:58:38.000Z" title="发表于 2026-04-28 11:58:38">2026-04-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2c56.html" title="nuoyis's lnmp 使用指南"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?7168" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="nuoyis's lnmp 使用指南"></a><div class="content"><a class="title" href="/posts/2c56.html" title="nuoyis's lnmp 使用指南">nuoyis's lnmp 使用指南</a><time datetime="2025-08-21T13:12:00.000Z" title="发表于 2025-08-21 21:12:00">2025-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/59ca.html" title="docker gitlab构建镜像"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://server-api.nuoyis.net/acg/?yasuo=1?4248" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="docker gitlab构建镜像"></a><div class="content"><a class="title" href="/posts/59ca.html" title="docker gitlab构建镜像">docker gitlab构建镜像</a><time datetime="2025-03-15T03:02:00.000Z" title="发表于 2025-03-15 11:02:00">2025-03-15</time></div></div></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">131</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastpushdate="2026-08-23T02:12:50.996Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2019 - 2026 By 诺依阁</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div><div class="footer_custom_text">本站部分CSS由<a target="_blank" rel="noopener" href="https://lolicon.team/">紗夕里</a>提供 | <a href="http://www.west.cn/" title="虚拟主机-域名注册-主机租用-服务器租用" target="_blank">云服务器</a><br><a href="//beian.miit.gov.cn" target="_blank" title="鄂ICP备2023004941号-2"><span class="badge-subject">鄂ICP备</span><span class="badge-value bg-color-tianyi">2023004941号-2</span></a> | <a href="//www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011702000752" target="_blank" title="鄂公网安备42011702000752号"><span class="badge-subject">鄂公网安备</span><span class="badge-value bg-color-tianyi">42011702000752号</span></a><br>本站由<a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" title="又拍云CDN" alt="又拍云CDN"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://static.nuoyis.net/libs/upyun/%E5%8F%88%E6%8B%8D%E4%BA%91_logo5.png" style="margin-bottom:-12.1px;margin-left:3px;margin-right:3px" alt="CDN" width="70" height="35"></a>提供CDN加速/云存储服务</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><script src="/js/tw_cn.js?v=5.7.0"></script><script src="/pluginsSrc/instant.page/instantpage.js?v=5.2.0" type="module"></script><script src="/pluginsSrc/vanilla-lazyload/dist/lazyload.iife.min.js?v=19.1.3"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('/pluginsSrc/typed.js/dist/typed.umd.js?v=3.0.0').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = [].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed && typed.destroy() }, 'typedDestroy')</script><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const from = data.from ? '出自 ' + data.from : ''
+      typedJSFn.processSubtitle(data.hitokoto, from ? [from] : [])
+    })
+    .catch(err => {
+      console.error('Failed to get the Hitokoto API:', err)
+      typedJSFn.processSubtitle([])
+    })
+}
+typedJSFn.run(subtitleType)</script></div><script src="https://server-api.nuoyis.net/live2d/autoload.js"></script><script type="text/javascript" src="https://static.nuoyis.net/private/aboutme/main/js/hua.js"></script><script src="/pluginsSrc/pjax/pjax.min.js?v=0.2.8" defer></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"]):not([data-fancybox])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      if (!item.parentNode) return
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || ''
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    const responseURL = e.request && e.request.responseURL
+    if (e.request && e.request.status === 404) {
+      true
+        ? pjax.loadUrl('/404.html')
+        : responseURL && (window.location.href = responseURL)
+    } else if (responseURL) {
+      window.location.href = responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span> 数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"></div><hr><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.7.0"></script></div></div></body></html>

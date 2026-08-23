@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <author>
+    <name>诺依阁</name>
+    <email>wkkjonlykang@vip.qq.com</email>
+  </author>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  <icon>https://www.gravatar.com/avatar/6abf8f79fe73648b360cfe2edce80c71</icon>
+  <id>https://blog.nuoyis.net/</id>
+  <link href="https://blog.nuoyis.net/" rel="alternate"/>
+  <link href="https://blog.nuoyis.net/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, 诺依阁</rights>
+  <subtitle>一个记录技术的日记簿</subtitle>
+  <title>诺依阁的日记簿</title>
+  <updated>2026-08-23T02:11:29.246Z</updated>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <category term="教程" scheme="https://blog.nuoyis.net/categories/%E6%95%99%E7%A8%8B/"/>
+    <id>https://blog.nuoyis.net/posts/5462.html</id>
+    <link href="https://blog.nuoyis.net/posts/5462.html"/>
+    <published>2026-05-19T06:08:46.000Z</published>
+    <summary>
+      <![CDATA[<p>首先打开网站: <a href="https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Pro">点击进入</a><br>然后点击My]]>
+    </summary>
+    <title>vmware最新版下载方法</title>
+    <updated>2026-08-23T02:11:29.246Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <category term="ai" scheme="https://blog.nuoyis.net/categories/ai/"/>
+    <id>https://blog.nuoyis.net/posts/93b5.html</id>
+    <link href="https://blog.nuoyis.net/posts/93b5.html"/>
+    <published>2026-04-29T10:17:03.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h1><h2 id="Docker部署"><a href="#Docker部署" class="headerlink"]]>
+    </summary>
+    <title>openclaw命令行与搭建(2026.5.3版本)</title>
+    <updated>2026-08-23T02:11:29.246Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <category term="教程" scheme="https://blog.nuoyis.net/categories/%E6%95%99%E7%A8%8B/"/>
+    <id>https://blog.nuoyis.net/posts/8a64.html</id>
+    <link href="https://blog.nuoyis.net/posts/8a64.html"/>
+    <published>2026-04-28T03:58:38.000Z</published>
+    <summary>
+      <![CDATA[<p>原先博客需要使用typora+picgo+typecho，其中typora编写完毕后需要复制到typecho后台去，极其不方便，然后经过高人指点，我对该软件交互使用开发了新高度<br>obsidian是一个开源的笔记/文档编写软件，软件开放性不错，可以装插件使用。主要优点是]]>
+    </summary>
+    <title>Obsidian + Hexo + GitHub Actions：写完博客，推送即发布</title>
+    <updated>2026-08-23T02:11:29.244Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <id>https://blog.nuoyis.net/posts/2c56.html</id>
+    <link href="https://blog.nuoyis.net/posts/2c56.html"/>
+    <published>2025-08-21T13:12:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>nuoyis’s lnmp 作为从原nuoyis’s]]>
+    </summary>
+    <title>nuoyis's lnmp 使用指南</title>
+    <updated>2026-08-23T02:11:29.246Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    <id>https://blog.nuoyis.net/posts/59ca.html</id>
+    <link href="https://blog.nuoyis.net/posts/59ca.html"/>
+    <published>2025-03-15T03:02:00.000Z</published>
+    <summary>
+      <![CDATA[<p>最近在研究流水线，对于我来说，自动构建并上传镜像是非常有必要的，一方面每次都需要执行代码，一方面每次都需要找到版本号，非常的麻烦。<br>在此，我顺便编写文章，记录gitlab快速搭建以及ci/cd部署。</p>
+<blockquote>
+<p>配置要求: 4H 8G]]>
+    </summary>
+    <title>docker gitlab构建镜像</title>
+    <updated>2026-08-23T02:11:29.245Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    <id>https://blog.nuoyis.net/posts/4847.html</id>
+    <link href="https://blog.nuoyis.net/posts/4847.html"/>
+    <published>2025-02-26T02:59:00.000Z</published>
+    <summary>
+      <![CDATA[<p>电脑五大件，CPU 内存条 硬盘 电源]]>
+    </summary>
+    <title>关于电脑五大件能换大厂就换大厂的建议</title>
+    <updated>2026-08-23T02:11:29.247Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    <id>https://blog.nuoyis.net/posts/25ae.html</id>
+    <link href="https://blog.nuoyis.net/posts/25ae.html"/>
+    <published>2025-02-07T00:09:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>更多内容均在<a href="https://blog.nuoyis.net/">https://blog.nuoyis.net</a>发布，此页面为永久页面</p>
+</blockquote>
+<p>诺依阁 Vmware]]>
+    </summary>
+    <title>诺依阁虚拟机ip划分表</title>
+    <updated>2026-08-23T02:11:29.250Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    <id>https://blog.nuoyis.net/posts/6a36.html</id>
+    <link href="https://blog.nuoyis.net/posts/6a36.html"/>
+    <published>2025-02-02T03:16:00.000Z</published>
+    <summary>Here's something encrypted, password is required to continue reading.</summary>
+    <title>k8s笔记大纲</title>
+    <updated>2026-08-23T02:11:29.246Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    <id>https://blog.nuoyis.net/posts/28fb.html</id>
+    <link href="https://blog.nuoyis.net/posts/28fb.html"/>
+    <published>2025-02-02T03:06:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>此教程目前仅限于v1.31以及以上版本，低版本可能存在其他兼容问题<br>目前最新版本:0.1.4(原v1.4版本)</p>
+</blockquote>
+<p>欢迎使用nuoyis-lnp]]>
+    </summary>
+    <title>nuoyis-lnp使用指南</title>
+    <updated>2026-08-23T02:11:29.246Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    <id>https://blog.nuoyis.net/posts/82d7.html</id>
+    <link href="https://blog.nuoyis.net/posts/82d7.html"/>
+    <published>2025-01-14T19:11:00.000Z</published>
+    <summary>
+      <![CDATA[<p>底层技术: docker</p>
+<p>自编写docker-compose/编译dockerfile </p>
+<p>诺依阁服务器要求</p>
+<p>1.SLA可用性&gt;]]>
+    </summary>
+    <title>诺依阁lnmp高级搭建</title>
+    <updated>2026-08-23T02:11:29.250Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    <id>https://blog.nuoyis.net/posts/619c.html</id>
+    <link href="https://blog.nuoyis.net/posts/619c.html"/>
+    <published>2025-01-14T19:07:24.000Z</published>
+    <summary>
+      <![CDATA[<h3 id="首先先准备好两个相同的数据库"><a href="#首先先准备好两个相同的数据库" class="headerlink"]]>
+    </summary>
+    <title>双主数据库搭建</title>
+    <updated>2026-08-23T02:11:29.248Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    <id>https://blog.nuoyis.net/posts/5a8b.html</id>
+    <link href="https://blog.nuoyis.net/posts/5a8b.html"/>
+    <published>2024-12-02T23:33:34.000Z</published>
+    <summary>
+      <![CDATA[<p>之前没有截图，找了很久的问题，但是我查找的结果都是windows11 底层虚拟化的未完全关闭的原因。<br>博主这里讲的挺好的，链接:<a]]>
+    </summary>
+    <title>新安装windows11 24h2 vmware和自带vmx冲突解决方案</title>
+    <updated>2026-08-23T02:11:29.249Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    <id>https://blog.nuoyis.net/posts/2efe.html</id>
+    <link href="https://blog.nuoyis.net/posts/2efe.html"/>
+    <published>2024-11-19T00:59:56.000Z</published>
+    <summary>
+      <![CDATA[<p>我的博客即将同步至腾讯云开发者社区，邀请大家一同入驻：<a]]>
+    </summary>
+    <title>第二次与腾讯云开发者社区合作同步通知</title>
+    <updated>2026-08-23T02:11:29.249Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    <id>https://blog.nuoyis.net/posts/9990.html</id>
+    <link href="https://blog.nuoyis.net/posts/9990.html"/>
+    <published>2024-09-22T02:51:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>哔哩哔哩视频教程:<a]]>
+    </summary>
+    <title>Ubuntu 22.05编译OpenWrt 23.05实战</title>
+    <updated>2026-08-23T02:11:29.245Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    <id>https://blog.nuoyis.net/posts/eed5.html</id>
+    <link href="https://blog.nuoyis.net/posts/eed5.html"/>
+    <published>2024-09-02T03:34:00.000Z</published>
+    <summary>
+      <![CDATA[<p>在一次写脚本的时候，突然发现rhel9.4采用rocky9.4源后，openssl安装的东西经常性的报错。一开始到处去查也没有先例和解释。然后到了rocky论坛的一个帖子( <a]]>
+    </summary>
+    <title>RHEL9(红帽9)关于使用rocky源导致openssl-lib和openssl-fips-provider冲突的问题解决方案</title>
+    <updated>2026-08-23T02:11:29.244Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <category term="default" scheme="https://blog.nuoyis.net/categories/default/"/>
+    <id>https://blog.nuoyis.net/posts/2a85.html</id>
+    <link href="https://blog.nuoyis.net/posts/2a85.html"/>
+    <published>2024-08-28T00:14:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>软件下载链接:<a]]>
+    </summary>
+    <title>小软件 - 快速把从Typecho转Hexo,或Hexo转Typecho</title>
+    <updated>2026-08-23T02:11:29.249Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <id>https://blog.nuoyis.net/posts/9bb5.html</id>
+    <link href="https://blog.nuoyis.net/posts/9bb5.html"/>
+    <published>2024-07-26T15:05:36.000Z</published>
+    <summary>
+      <![CDATA[<p>最近，使用了红帽9.4和Rocky9.4 外带升级最新内核，再加上小许调优措施，访问速度已经达到了之前centos 8 2核4G的速度了。主要是最小化的红帽9，启动速度比7和8更加快速，只要你会手动配源就能体验到秒速启动的快感。<br>然后就是Centos]]>
+    </summary>
+    <title>
+      <![CDATA[用红帽&amp;红帽衍生发行版 9来优化你的站点吧]]>
+    </title>
+    <updated>2026-08-23T02:11:29.249Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <id>https://blog.nuoyis.net/posts/92c1.html</id>
+    <link href="https://blog.nuoyis.net/posts/92c1.html"/>
+    <published>2024-07-06T20:04:00.000Z</published>
+    <summary>
+      <![CDATA[<p>Red Hat Enterprise Linux官方下载的话，首先得进入官网，选择右上角support,再点击downloads，然后点击Red Hat Enterprise Linux,再去选择9.x版本<br>快捷进入(需要注册):<a]]>
+    </summary>
+    <title>RHEL9-Rocky9-Openeuler下载方法</title>
+    <updated>2026-08-23T02:11:29.244Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <id>https://blog.nuoyis.net/posts/6465.html</id>
+    <link href="https://blog.nuoyis.net/posts/6465.html"/>
+    <published>2024-05-23T14:23:00.000Z</published>
+    <summary>
+      <![CDATA[<p>docker命令大全</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span]]>
+    </summary>
+    <title>Docker用法合集</title>
+    <updated>2026-08-23T02:11:29.244Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>诺依阁</name>
+      <email>wkkjonlykang@vip.qq.com</email>
+    </author>
+    <id>https://blog.nuoyis.net/posts/f52a.html</id>
+    <link href="https://blog.nuoyis.net/posts/f52a.html"/>
+    <published>2024-05-10T11:36:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="装配前置"><a href="#装配前置" class="headerlink"]]>
+    </summary>
+    <title>以 RHCL9 做路由器分配教程</title>
+    <updated>2026-08-23T02:11:29.246Z</updated>
+  </entry>
+</feed>
